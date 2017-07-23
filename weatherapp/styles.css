@@ -1,0 +1,170 @@
+/*Common*/
+
+body {
+    font-family: monospace, sans-serif;
+    background-color: #ffffff;
+    font-size: 20px;
+    height: 100%;
+}
+
+.myWhiteText {
+    color: white !important;
+    text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+}
+
+#nav_bar {
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: deepskyblue;
+}
+
+#brand {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#nav_list>li>a {
+    color: white !important;
+    text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+    font-weight: 500;
+}
+
+#logo {
+    max-height: 42px;
+    margin-right: 10px;
+    margin-top: -15px;
+    display: inline-block;
+}
+
+.footer {
+    background-color: darkgreen;
+    font-size: 12px;
+    height: 40px;
+    bottom: 0;
+}
+
+
+/*Mainpage*/
+
+#mainApp {
+    background-color: white;
+    color: black;
+    width: auto;
+    height: 400px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 570px;
+    max-height: 768px;
+    height: 100%;
+    margin-bottom: 768px auto -40px;
+}
+
+#mainIntro {
+    background: url(../images/weather_clouds.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+#text1 {
+    padding-top: 30px;
+}
+
+#text2 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#list_item {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#welcomeText {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 12px 25px 40px 25px;
+    letter-spacing: 0.5px;
+}
+
+.info-icon i {
+    font-size: 40px;
+    color: deepskyblue;
+}
+
+#myDesc h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#myDesc {
+    margin: 0 auto;
+    height: auto;
+}
+
+
+/*Current*/
+
+#currentMain {
+    background-image: url(../images/weather_clouds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 570px;
+    max-height: 768px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 768px auto -40px;
+}
+
+#cityDiv {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#errorMsg {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#results {
+    margin: auto;
+    width: 60%;
+    background-color: white;
+    border-radius: 25px;
+}
+
+
+/*Forecast*/
+
+#forecastMain {
+    background-image: url(../images/weather_clouds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 570px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 768px auto -40px;
+}
+
+#resultTable>thead>tr {
+    background-color: deepskyblue;
+    color: white;
+}
+
+#resultTable>tbody>tr {
+    background-color: white;
+    color: black;
+}
+
+#resultTable>thead>tr>th,
+#resultTable>tbody>tr>td {
+    border-color: deepskyblue;
+}

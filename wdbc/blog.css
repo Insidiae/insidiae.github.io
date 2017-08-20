@@ -1,0 +1,42 @@
+body {
+    max-width: 700px;
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    border: 20px solid #bdc3c7;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.date {
+    color: #3498db;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2.0rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+/* Gradient color1 - color2 - color1 */
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+p:nth-of-type(1) {
+    border-left: 5px solid #bdc3c7;
+    padding-left: 5px;
+}

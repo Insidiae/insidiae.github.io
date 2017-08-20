@@ -54,8 +54,10 @@ body {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    height: 1080px;
-    margin-bottom: 1080px auto -40px;
+    min-height: 570px;
+    max-height: 768px;
+    height: 100%;
+    margin-bottom: 768px auto -40px;
 }
 
 #mainIntro {
@@ -111,9 +113,11 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 1080px;
+    min-height: 570px;
+    max-height: 768px;
+    height: 100%;
     width: 100%;
-    margin-bottom: 1024px auto -40px;
+    margin-bottom: 768px auto -40px;
 }
 
 #cityDiv {
@@ -144,9 +148,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 1080px;
+    min-height: 570px;
+    height: 100%;
     width: 100%;
-    margin-bottom:1024px auto -40px;
+    margin-bottom: 768px auto -40px;
 }
 
 #resultTable>thead>tr {

@@ -1,0 +1,75 @@
+body {
+    background: #f4c4f3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc67fa, #f4c4f3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc67fa, #f4c4f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Montserrat", sans-serif;
+    color: #621AD6;
+}
+
+input {
+    font-size: 18px;
+    color: #621AD6;
+    border: 3px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+input:focus {
+    border: 3px solid #621AD6;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ul a {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    background-color: #621AD6;
+    color: #ECFF55;
+}
+
+ul a:hover {
+    border-left: 3px solid #f4c4f3;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#randLink {
+    display: inline-block;
+    max-width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #621AD6;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#searchBar {
+    width: 33%;
+    margin: inherit;
+    position: relative;
+}

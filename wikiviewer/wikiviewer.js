@@ -31,7 +31,7 @@ function wikiSearch() {
     $.ajax({
         url: api + search,
         dataType: 'json',
-        type: 'POST',
+        type: 'GET',
         success: function (data) {
             $("ul").html("");
             for (var page in data.query.pages) {

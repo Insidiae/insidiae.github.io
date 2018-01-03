@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src="assets/js/paper-full.min.js"></script>
+    <script type="text/javascript" src="assets/js/howler.min.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+         var keys = {
+            a: { sound: new Howl({ src: ['assets/sounds/bubbles.mp3'] }), color: '#1ABC9C' },
+            b: { sound: new Howl({ src: ['assets/sounds/clay.mp3'] }), color: '#2ECC71' },
+            c: { sound: new Howl({ src: ['assets/sounds/confetti.mp3'] }), color: '#3498DB' },
+            d: { sound: new Howl({ src: ['assets/sounds/corona.mp3'] }), color: '#9B59B6' },
+            e: { sound: new Howl({ src: ['assets/sounds/dotted-spiral.mp3'] }), color: '#34495E' },
+            f: { sound: new Howl({ src: ['assets/sounds/flash-1.mp3'] }), color: '#16A085'},
+            g: { sound: new Howl({ src: ['assets/sounds/flash-2.mp3'] }), color: '#27AE60' },
+            h: { sound: new Howl({ src: ['assets/sounds/flash-3.mp3'] }), color: '#2980B9' },
+            i: { sound: new Howl({ src: ['assets/sounds/glimmer.mp3'] }), color: '#8E44AD' },
+            j: { sound: new Howl({ src: ['assets/sounds/moon.mp3'] }), color: '#2C3E50' },
+            k: { sound: new Howl({ src: ['assets/sounds/pinwheel.mp3'] }), color: '#F1C40F' },
+            l: { sound: new Howl({ src: ['assets/sounds/piston-1.mp3'] }), color: '#E67E22' },
+            m: { sound: new Howl({ src: ['assets/sounds/piston-2.mp3'] }), color: '#C74C3C' },
+            n: { sound: new Howl({ src: ['assets/sounds/piston-3.mp3'] }), color: '#95A5A6' },
+            o: { sound: new Howl({ src: ['assets/sounds/prism-1.mp3'] }), color: '#F39C12' },
+            p: { sound: new Howl({ src: ['assets/sounds/prism-2.mp3'] }), color: '#D35400' },
+            q: { sound: new Howl({ src: ['assets/sounds/prism-3.mp3'] }), color: '#1ABC9C' },
+            r: { sound: new Howl({ src: ['assets/sounds/splits.mp3'] }), color: '#2ECC71' },
+            s: { sound: new Howl({ src: ['assets/sounds/squiggle.mp3'] }), color: '#3498DB' },
+            t: { sound: new Howl({ src: ['assets/sounds/strike.mp3'] }), color: '#9B59B6' },
+            u: { sound: new Howl({ src: ['assets/sounds/suspension.mp3'] }), color: '#34495E' },
+            v: { sound: new Howl({ src: ['assets/sounds/timer.mp3'] }), color: '#16A085' },
+            w: { sound: new Howl({ src: ['assets/sounds/ufo.mp3'] }), color: '#27AE60' },
+            x: { sound: new Howl({ src: ['assets/sounds/veil.mp3'] }), color: '#2980B9' },
+            y: { sound: new Howl({ src: ['assets/sounds/wipe.mp3'] }), color: '#8E44AD' },
+            z: { sound: new Howl({ src: ['assets/sounds/zig-zag.mp3'] }), color: '#2C3E50' }
+        }; 
+        //var sound = new Howl({ src: ['assets/sounds/bubbles.mp3'] }).play();
+
+        var circles = [];
+        function onKeyDown(event) {
+            if(keys[event.key]) {
+                keys[event.key].sound.play();
+                circles.push(new Path.Circle({
+                    center: new Point(view.size.width, view.size.height) * Point.random(),
+                    radius: 500,
+                    fillColor: keys[event.key].color
+                }));
+            }
+        }
+
+        function onFrame(event) {
+           for (var i = 0; i < circles.length; i++) {
+                var item = circles[i];
+                item.fillColor.hue += 1;
+                item.scale(0.9);
+                if(item.area < 1){
+                    item.remove();
+                    circles.splice(i, 1);
+                    i--;
+                }
+           }
+        }
+    </script>
+    <title>Patatap Clone</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+
+</html>

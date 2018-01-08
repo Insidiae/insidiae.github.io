@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="twitchviewer.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+    <title>freeCodeCamp: Use the Twitch.tv JSON API</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="header">
+            <h1>Twitch Streamers</h1>
+            <div class="menu">
+                <div class="option active" id="showAll">All</div>
+                <div class="option" id="showOnline">Online</div>
+                <div class="option" id="showOffline">Offline</div>
+            </div>
+        </div>
+        <h3 class="online">STREAMING NOW</h3>
+        <ul class="online" id="streaming"></ul>
+        <h3 class="offline">Offline Channels</h3>
+        <ul class="offline" id="offline"></ul>
+    </div>
+
+    <script type="text/javascript" src="twitchviewer.js"></script>
+</body>
+
+</html>

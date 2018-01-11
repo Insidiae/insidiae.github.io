@@ -1,6 +1,6 @@
 body {
     font-family: monospace;
-    background: #588DFD;
+    background-color: #588DFD;
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27,6 +27,8 @@ h3 {
 }
 
 div#display {
+    text-align: right;
+    font-size: 3em;
     background-color: #ECF0F1;
     -ms-flex-preferred-size: 20%;
     flex-basis: 20%;

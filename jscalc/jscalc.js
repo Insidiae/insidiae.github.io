@@ -45,6 +45,7 @@ $("button").click(function() {
         } else {
             num2 = 0;
             num1 = 0;
+            ans = 0;
         }
         
     } else if ($(this).hasClass("decimal")) {

@@ -24,6 +24,8 @@ h3 {
     margin-top: 0;
     margin-bottom: 10px;
     padding-top: 20px;
+    color: #AEC7FE;
+    font-size: 2em;
 }
 
 div#display {
@@ -58,6 +60,23 @@ button {
     -ms-flex-positive: 1;
     flex-grow: 1;
     margin: 0 10px;
+    background-color: #588DFD;
+    color: #AEC7FE;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 5px solid #AEC7FE;
+    border-radius: 15%;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: #AEC7FE;
+    color: #588DFD;
+}
+
+button:active {
+    background-color: #7FA7FD;
+    color: #588DFD;
 }
 
 div.bottom button[value="="] {
@@ -68,6 +87,7 @@ div.bottom button[value="="] {
 .container {
     width: 500px;
     height: 500px;
+    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -78,6 +98,8 @@ div.bottom button[value="="] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    border: 5px solid #AEC7FE;
+    border-radius: 10px;
 }
 
 .row {

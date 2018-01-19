@@ -10,6 +10,7 @@
     --yellow: #ffc600;
     --black: #272727;
     --kounatblue: #588dfd;
+	--green: #96CA32;
 }
 
 html {
@@ -40,7 +41,8 @@ html {
 
 body {
     background-image: url("./images/topography.svg"),
-    linear-gradient(110deg, var(--kounatblue), #6d47d9);
+    linear-gradient(110deg, var(--kounatblue), #fd0313);
+	/*6d47d9*/
     background-size: 340px, auto;
     min-height: calc(100vh - 100px);
     margin: 50px;
@@ -72,7 +74,7 @@ h6 {
     border: 5px solid rgba(0, 0, 0, 0.03);
     border-radius: 3px;
     font-size: 35px;
-    background-color: var(--yellow);
+    background-color: var(--green);
     /* best colour */
 }
 

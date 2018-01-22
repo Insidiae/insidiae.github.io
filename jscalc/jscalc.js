@@ -6,13 +6,13 @@ var optn = "";
 $("button").click(function() {
     var pressed = $(this).attr("value");
     var dispText = $("#display").text();
-    
+
     if($(this).hasClass("optr")) {
         if(onOperand2 && num2 != 0) {
             if(pressed == "neg") {
                 num2 = -num2;
                 $("#display").text(num2);
-                
+
             } else {
                 eval();
                 num1 = ans;
@@ -23,20 +23,20 @@ $("button").click(function() {
             if(ans !== 0) {
                 num1 = ans;
             }
-            
+
             if(pressed == "neg") {
                 num1 = -num1;
                 $("#display").text(num1);
-                
+
             } else {
                 optn = $(this).attr("value");
                 nextOperand();
             }
-            
+
         } else {
             console.log("Operation on empty input");
         }
-        
+
     } else if($(this).hasClass("clear")) {
         $("#display").text("0");
         hasDecimal = false;
@@ -52,23 +52,25 @@ $("button").click(function() {
             num1 = 0;
             ans = 0;
         }
-        
+
     } else if ($(this).hasClass("decimal")) {
         if(!hasDecimal && !resetDisp) {
             dispText += pressed;
             $("#display").text(dispText);
             hasDecimal = true;
         }
-        
+
     } else if ($(this).hasClass("eval")) {
         eval();
-        
+
     } else {
         if(resetDisp || dispText === "0") {
             dispText = "";
             $("#display").text("");
         }
-        
+
+        if(ans !== 0) ans = 0;
+
         if(dispText.length < 10) {
             dispText += pressed;
             $("#display").text(dispText);

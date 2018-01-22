@@ -37,21 +37,6 @@ div#display {
     margin: 10px 0;
 }
 
-div.row button:first-child {
-    margin-left: 0;
-    margin-right: 10px;
-}
-
-div.row button:last-child {
-    margin-left: 10px;
-    margin-right: 0;
-}
-
-div.bottom button {
-    -ms-flex-preferred-size: 19%;
-    flex-basis: 19%
-}
-
 button {
     font-family: inherit;
     -ms-flex-preferred-size: 20%;
@@ -59,7 +44,7 @@ button {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin: 0 10px;
+    margin: 0;
     background-color: #588DFD;
     color: #AEC7FE;
     -webkit-box-shadow: none;
@@ -79,9 +64,8 @@ button:active {
     color: #588DFD;
 }
 
-div.bottom button[value="="] {
-    -ms-flex-preferred-size: 40%;
-    flex-basis: 43%;
+button[value="="] {
+  grid-column: span 2;
 }
 
 .container {
@@ -102,11 +86,12 @@ div.bottom button[value="="] {
     border-radius: 10px;
 }
 
-.row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 10px 0;
-    -ms-flex-preferred-size: 17.5%;
-    flex-basis: 17.5%;
+.keypad {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  margin: 10px 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }

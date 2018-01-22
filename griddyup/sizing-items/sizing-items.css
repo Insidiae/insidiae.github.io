@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.item9 {
+  background-color: var(--kounatblue);
+  grid-column: span 3;
+  grid-row: span 3;
+}

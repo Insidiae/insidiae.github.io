@@ -12,6 +12,7 @@ const brIncDec = document.querySelectorAll(".br-inc-dec");
 const timerBtn = document.querySelector("#start_stop");
 const timerBtnIcon = document.querySelector("#start_stop i");
 const resetBtn = document.querySelector("#reset");
+const audio = document.querySelector("audio");
 window.onload = clearTimer;
 
 sesIncDec.forEach(incDecBtn => incDecBtn.addEventListener("click", function(){
@@ -58,6 +59,8 @@ function clearTimer() {
     timerDisplay.textContent = `${sessionTime.textContent}:00`;
     timerBtnIcon.classList.remove("fa-pause");
     timerBtnIcon.classList.add("fa-play");
+    audio.pause();
+    audio.currentTime = 0;
 }
 
 function timer(secs) {
@@ -70,6 +73,8 @@ function timer(secs) {
             const diff = Math.round((then - Date.now()) / 1000);
             if(diff < 0) {
                 clearInterval(countdown);
+                audio.currentTime = 0;
+                audio.play(); 
                 if(onSession) {
                     onSession = false;
                     timer(parseInt(breakTime.textContent) * 60);

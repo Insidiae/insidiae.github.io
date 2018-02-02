@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.item:nth-child(6n) {
+    background-color: cadetblue;
+    grid-column: span 6;
+}
+
+.item:nth-child(8n) {
+    background-color: tomato;
+    grid-column: span 2;
+}
+
+.item:nth-child(9n) {
+    background-color: limegreen;
+    grid-row: span 2;
+}
+
+.container>.item18 {
+    background-color: slategray;
+    grid-column-end: -1;
+}

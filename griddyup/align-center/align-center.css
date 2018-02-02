@@ -1,0 +1,42 @@
+/*
+    justify-items:
+    align-items:
+
+    justify-content:
+    align-content:
+
+    align-self:
+    justify-self:
+
+    justify-* is row axis
+    align-* is column axis
+*/
+
+.container {
+    font-size: 12px;
+    height: 500px;
+    display: grid;
+    grid-gap: 20px;
+    border: 5px solid #BADA55;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(3, 50px);
+    -ms-flex-pack: distribute;
+    place-content: space-around space-around;
+    place-items: stretch stretch;
+}
+
+.itm {
+    background-color: aliceblue;
+}
+
+.itm3, .itm8, .itm13 {
+    place-self: center center;
+}
+
+.itm1, .itm6, .itm11 {
+    place-self: center start;
+}
+
+.itm5, .itm10, .itm15 {
+    place-self: center end;
+}

@@ -67,7 +67,7 @@ function selectPlayer(player) {
 function turnClick(cell) {
     if (typeof origBoard[cell.target.id] == 'number') {
         turn(cell.target.id, human);
-        if(!checkWin(origBoard, human)) turn(bestSpot(), com);
+        if(!checkWin(origBoard, human) && !checkTie()) turn(bestSpot(), com);
     }
 }
 

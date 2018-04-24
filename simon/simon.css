@@ -1,0 +1,141 @@
+body {
+  font-family: 'Inconsolata', monospace;
+  height: 100vh;
+  margin: 0;
+  background: #588dfd;
+  background: -webkit-gradient(linear, left bottom, right top, from(#588dfd), color-stop(50%, #3171fb), to(#1159f3));
+  background: linear-gradient(to top right, #588dfd 0%, #3171fb 50%, #1159f3 100%);
+  color: #ecf0f1;
+}
+
+.simon {
+  border-radius: 100%;
+  height: 500px;
+  width: 500px;
+  max-width: 100%;
+  background-color: #7fa7fd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.simon__row {
+  height: 250px;
+  width: 500px;
+  margin: 0;
+}
+
+.simon__button {
+  height: 220px;
+  width: 220px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.simon__button--red {
+  background-color: #ff464b;
+  border-top-left-radius: 100%;
+  margin: 20px 10px 10px 20px;
+}
+
+.simon__button--red:active {
+  background-color: #ffa5a8;
+}
+
+.simon__button--green {
+  background-color: #0cef00;
+  border-top-right-radius: 100%;
+  margin: 20px 20px 10px 0;
+}
+
+.simon__button--green:active {
+  background-color: #7dfe76;
+}
+
+.simon__button--yellow {
+  background-color: #f1d619;
+  border-bottom-left-radius: 100%;
+  margin: 10px 10px 20px 20px;
+}
+
+.simon__button--yellow:active {
+  background-color: #fff294;
+}
+
+.simon__button--blue {
+  background-color: #3171fb;
+  border-bottom-right-radius: 100%;
+  margin: 10px 20px 20px 0;
+}
+
+.simon__button--blue:active {
+  background-color: #aec7fe;
+}
+
+.simon__controls {
+  height: 275px;
+  width: 275px;
+  border-radius: 100%;
+  background-color: #7fa7fd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simon__controls__title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.simon__controls__strict {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.simon__controls__strict__switch {
+  display: none;
+}
+
+.simon__controls__strict__slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ecf0f1;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.simon__controls__strict__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.simon__controls__strict__switch:checked + .simon__controls__strict__slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.simon__controls__strict__switch:checked +
+.simon__controls__strict__slider {
+  background-color: #1159f3;
+}

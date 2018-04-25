@@ -6,13 +6,13 @@ body {
   background: -webkit-gradient(linear, left bottom, right top, from(#588dfd), color-stop(50%, #3171fb), to(#1159f3));
   background: linear-gradient(to top right, #588dfd 0%, #3171fb 50%, #1159f3 100%);
   color: #ecf0f1;
+  user-select: none;
 }
 
 .simon {
   border-radius: 100%;
   height: 500px;
   width: 500px;
-  max-width: 100%;
   background-color: #7fa7fd;
   position: absolute;
   top: 50%;
@@ -82,28 +82,93 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 55px);
+  grid-column-gap: 10px;
 }
 
 .simon__controls__title {
   font-size: 3em;
+  margin-bottom: 0;
+  text-align: center;
+  grid-column: 2 / -2;
+  grid-row: span 2;
+  align-self: center;
+}
+
+.simon__controls__round {
+  grid-column: span 2;
+  grid-row: span 2;
+  text-align: center;
+}
+
+.simon__controls__round__label {
   margin-bottom: 10px;
 }
 
+.simon__controls__round__number {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.simon__controls__reset {
+  grid-row: span 2;
+  justify-self: center;
+}
+
+.simon__controls__reset__label {
+  font-size: 1.1em;
+  margin-bottom: 7px;
+}
+
+.simon__controls__reset__button {
+  background-color: #588dfd;
+  color: #aec7fe;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: center;
+  border: 3px solid #aec7fe;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.simon__controls__reset__button:hover {
+  background-color: #aec7fe;
+  color: #588dfd;
+}
+
+.simon__controls__reset__button:active {
+  background-color: #7fa7fd;
+  border-color: #7fa7fd;
+  color: #588dfd;
+}
+
 .simon__controls__strict {
+  grid-column: span 2;
+  grid-row: span 2;
+  padding-left: 10px;
+}
+
+.simon__controls__strict__label {
+  padding-left: 5px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.simon__controls__strict__button {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 60px;
   height: 34px;
 }
 
-.simon__controls__strict__switch {
+.simon__controls__strict__button__switch {
   display: none;
 }
 
-.simon__controls__strict__slider::before {
+.simon__controls__strict__button__slider::before {
   position: absolute;
   content: "";
   height: 26px;
@@ -116,7 +181,7 @@ body {
   border-radius: 50%;
 }
 
-.simon__controls__strict__slider {
+.simon__controls__strict__button__slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -129,13 +194,19 @@ body {
   border-radius: 34px;
 }
 
-.simon__controls__strict__switch:checked + .simon__controls__strict__slider::before {
+.simon__controls__strict__button__switch:checked + .simon__controls__strict__button__slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
-.simon__controls__strict__switch:checked +
-.simon__controls__strict__slider {
-  background-color: #1159f3;
+.simon__controls__strict__button__switch:checked +
+.simon__controls__strict__button__slider {
+  background-color: #588dfd;
+}
+
+@media (max-width: 500px) {
+  .simon {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
 }

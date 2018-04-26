@@ -33,23 +33,27 @@ body {
   cursor: pointer;
 }
 
-.simon__button--red {
-  background-color: #ff464b;
-  border-top-left-radius: 100%;
-  margin: 20px 10px 10px 20px;
+.simon__button__unclickable {
+  pointer-events: none;
 }
 
-.simon__button--red:active {
+.simon__button--red {
+  background-color: #ff464b;
+  border-top-right-radius: 100%;
+  margin: 20px 20px 10px 0;
+}
+
+.simon__button--red.simon__button--light, .simon__button--red:active {
   background-color: #ffa5a8;
 }
 
 .simon__button--green {
   background-color: #0cef00;
-  border-top-right-radius: 100%;
-  margin: 20px 20px 10px 0;
+  border-top-left-radius: 100%;
+  margin: 20px 10px 10px 20px;
 }
 
-.simon__button--green:active {
+.simon__button--green.simon__button--light, .simon__button--green:active {
   background-color: #7dfe76;
 }
 
@@ -59,7 +63,7 @@ body {
   margin: 10px 10px 20px 20px;
 }
 
-.simon__button--yellow:active {
+.simon__button--yellow.simon__button--light, .simon__button--yellow:active {
   background-color: #fff294;
 }
 
@@ -69,7 +73,7 @@ body {
   margin: 10px 20px 20px 0;
 }
 
-.simon__button--blue:active {
+.simon__button--blue.simon__button--light, .simon__button--blue:active {
   background-color: #aec7fe;
 }
 
@@ -127,6 +131,7 @@ body {
   color: #aec7fe;
   -webkit-box-shadow: none;
   box-shadow: none;
+  cursor: pointer;
   text-align: center;
   border: 3px solid #aec7fe;
   border-radius: 100%;
@@ -143,6 +148,10 @@ body {
   background-color: #7fa7fd;
   border-color: #7fa7fd;
   color: #588dfd;
+}
+
+.simon__controls__reset__button:focus {
+  outline: none;
 }
 
 .simon__controls__strict {

@@ -7,23 +7,23 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
   <link rel="stylesheet" href="simon.css">
-  <title>freeCodeCamp Simon Game</title>
+  <title>freeCodeCamp Simon® Game</title>
 </head>
 <body>
   <div class="simon">
     <div class="simon__row">
-      <div class="simon__button simon__button--red"></div>
-      <div class="simon__button simon__button--green"></div>
+      <div data-key="1" class="simon__button simon__button--green simon__button__unclickable"></div>
+      <div data-key="2" class="simon__button simon__button--red simon__button__unclickable"></div>
     </div>
     <div class="simon__row">
-      <div class="simon__button simon__button--yellow"></div>
-      <div class="simon__button simon__button--blue"></div>
+      <div data-key="3" class="simon__button simon__button--yellow simon__button__unclickable"></div>
+      <div data-key="4" class="simon__button simon__button--blue simon__button__unclickable"></div>
     </div>
     <div class="simon__controls">
       <h1 class="simon__controls__title">Simon®</h1>
       <div class="simon__controls__round">
         <h3 class="simon__controls__round__label">Round</h3>
-        <p class="simon__controls__round__number">00</p>
+        <p class="simon__controls__round__number">--</p>
       </div>
       <div class="simon__controls__reset">
         <p class="simon__controls__reset__label">Start</p>
@@ -38,5 +38,12 @@
       </div>
     </div>
   </div>
+
+  <audio data-key="1" src="sounds/simonSound1.mp3"></audio>
+  <audio data-key="2" src="sounds/simonSound2.mp3"></audio>
+  <audio data-key="3" src="sounds/simonSound3.mp3"></audio>
+  <audio data-key="4" src="sounds/simonSound4.mp3"></audio>
+
+  <script src="simon.js"></script>
 </body>
 </html>

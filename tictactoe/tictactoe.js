@@ -38,7 +38,7 @@ playerSelect.forEach(player =>
 function resetGame() {
   // Clear the board's contents
   origBoard = Array.from(Array(9).keys()); // Creates an array from 0-8
-  cells.forEach(function(cell) {
+  cells.forEach(cell => {
     cell.classList.remove("ttt__table__cell--highlight");
     cell.addEventListener("click", turnClick, false);
   });
@@ -65,7 +65,9 @@ function selectPlayer(player) {
     com = "X";
     playerNames.O = "You";
     playerNames.X = "COM";
-    turn(bestSpot(), com);
+    // turn(bestSpot(), com);
+    // bestSpot() always chooses the upper left square for the first move, so just randomize the first move to make it more exciting
+    turn(Math.floor(Math.random() * 9), com);
   }
   // Hide the overlay, if it is visible
   overlay.classList.remove("ttt__overlay--active");

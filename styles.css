@@ -1,0 +1,247 @@
+:root {
+  --project-tile-size: 250px;
+  --social-link-size: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #689f38;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Original Pure CSS Responsive Navbar design by JoGeek */
+/* https://codepen.io/jo_Geek/pen/xgbaEr */
+.navbar {
+  font-family: "Source Code Pro", monospace;
+  height: 50px;
+  width: 100%;
+  background-color: #6b8e23;
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar > .nav-header {
+  display: inline;
+}
+
+.navbar > .nav-header > .nav-title {
+  font-family: "Ubuntu", sans-serif;
+  display: inline-block;
+  font-size: 22px;
+  color: #bdbdbd;
+  padding: 10px 10px 10px 10px;
+}
+
+.navbar > .nav-btn {
+  display: none;
+}
+
+.navbar > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.navbar > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #dcedc8;
+}
+
+.navbar > .nav-links > a:hover {
+  background-color: #689f38;
+}
+
+.navbar > #nav-check {
+  display: none;
+}
+
+.container {
+  padding-top: 75px;
+}
+
+.welcome {
+  height: 100vh;
+  position: relative;
+}
+
+.welcome__title {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+
+.section__divider {
+  background-color: #6b8e23;
+  color: #ecf0f1;
+  font-size: 2.5rem;
+  line-height: 50px;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section__desc {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 2rem;
+}
+
+.projects__grid {
+  width: 90vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--project-tile-size));
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.projects__grid__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects__grid__item__thumbnail {
+  background-color: #588dfd;
+  width: var(--project-tile-size);
+  height: var(--project-tile-size);
+}
+
+.projects__grid__item__title {
+  margin: 10px 0;
+  width: 100%;
+  height: 1fr;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.projects__grid__item__link {
+  display: block;
+  width: 50%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  left: 50%;
+  background-color: #588dfd;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.projects__grid__item__link:hover {
+  background-color: #7fa7fd;
+  text-decoration: none;
+}
+
+.projects__grid__item__link:active {
+  background-color: #3171fb;
+}
+
+.contact__grid {
+  width: 90vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--social-link-size));
+  grid-auto-rows: 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.contact__grid__item {
+  font-size: 3rem;
+  height: var(--social-link-size);
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid #689f38;
+  transition: all 0.2s;
+}
+
+.contact__grid__item:hover {
+  background-color: #689f38;
+  color: #dcedc8;
+}
+
+.contact__grid__item__icon {
+  line-height: var(--social-link-size);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --project-tile-size: 150px;
+    --social-link-size: 100px;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
+  .navbar > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .navbar > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .navbar > .nav-btn > label:hover {
+    background-color: #689f38;
+  }
+  .navbar > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #bdbdbd;
+  }
+  .navbar > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #757575;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .navbar > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .navbar > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .navbar > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  .projects__grid__item__link {
+    width: 60%;
+  }
+}

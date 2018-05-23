@@ -2,27 +2,151 @@
 <html lang=en>
 
 <head>
-    <meta charset="UTF-8">
-    <title>COMING SOON</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro|Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>COMING SOON</title>
 </head>
 
 <body>
-    <h2>Portfolio page: COMING SOON</h2>
-    <h3>Meanwhile, here's some links to my other projects:</h3>
-    <ul>
-        <li><a href="tribute/siivagunner.html" target="_blank">SiIvaGunner Tribute Page</a></li>
-        <li><a href="quotegen/quotegen.html" target="_blank">Jojo's Bizzare Random Quote Generator</a></li>
-        <li><a href="weatherapp/weatherapp.html" target="_blank">Weather App</a></li>
-        <li><a href="wikiviewer/wikiviewer.html">Wikipedia Viewer</a></li>
-        <li><a href="twitchviewer/twitchviewer.html">Twitch Viewer</a></li>
-        <li><a href="jscalc/jscalc.html">JavaScript Calculator</a></li>
-        <li><a href="pomodoro/pomodoro.html">Pomodoro Clock</a></li>
-        <li><a href="tictactoe/tictactoe.html">Tic Tac Toe</a></li>
-        <li><a href="simon/simon.html">Simon® Game</a></li>
-    </ul>
-    <p>While you're here, check out my solutions for <a href="https://www.udemy.com/the-web-developer-bootcamp" target="_blank">The Web Developer Bootcamp</a> <a href="wdbc/index.html">activities</a> and <a href="wdbc-proj/index.html">projects</a> as well!</p>
-    <p>I'm also doing the <a href="https://javascript30.com/" target="_blank">#JavaScript30</a> challenge! You can check my progress <a href="js30/index.html">here</a>.</p>
-    <p>Also, <a href="griddyup/griddyup.html">click here</a> to check my progress in learning CSS Grid!</p>
+  <!-- Original Pure CSS Responsive Navbar design by JoGeek -->
+  <!-- https://codepen.io/jo_Geek/pen/xgbaEr -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-header">
+      <div class="nav-title">
+        Insidiae
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <input type="checkbox" id="nav-check">
+    <div class="nav-links">
+      <a href="#welcome-section">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <main class="container">
+    <section class="welcome" id="welcome-section">
+      <h1 class="welcome__title">Hello there.</h1>
+    </section>
+    <section class="projects" id="projects">
+      <h1 class="section__divider">Projects</h1>
+      <h2 class="section__desc">freeCodeCamp Projects</h2>
+      <!-- TODO: Add thumbnails for projects -->
+      <div class="projects__grid">
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">SiIvaGunner Tribute Page</h3>
+          <a class="projects__grid__item__link" href="tribute/siivagunner.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Jojo's Bizzare Random Quote Generator</h3>
+          <a class="projects__grid__item__link" href="quotegen/quotegen.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Weather App</h3>
+          <a class="projects__grid__item__link" href="weatherapp/weatherapp.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Wikipedia Viewer</h3>
+          <a class="projects__grid__item__link" href="wikiviewer/wikiviewer.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Twitch Viewer</h3>
+          <a class="projects__grid__item__link" href="twitchviewer/twitchviewer.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">JavaScript Calculator</h3>
+          <a class="projects__grid__item__link" href="jscalc/jscalc.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Pomodoro Clock</h3>
+          <a class="projects__grid__item__link" href="pomodoro/pomodoro.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Tic Tac Toe</h3>
+          <a class="projects__grid__item__link" href="tictactoe/tictactoe.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Simon® Game</h3>
+          <a class="projects__grid__item__link" href="simon/simon.html" target="_blank">View Project</a>
+        </div>
+      </div>
+      <h2 class="section__desc">
+        <a class="section__desc__link" href="https://www.udemy.com/the-web-developer-bootcamp/">The Web Developer Bootcamp</a>
+      </h2>
+      <div class="projects__grid">
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Course Exercises</h3>
+          <a class="projects__grid__item__link" href="wdbc/index.html" target="_blank">View More</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">Course Projects</h3>
+          <a class="projects__grid__item__link" href="wdbc-proj/index.html" target="_blank">View More</a>
+        </div>
+      </div>
+      <h2 class="section__desc">Misc. Activities and Projects</h2>
+      <div class="projects__grid">
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">
+            <a href="https://javascript30.com/" target="_blank">#JavaScript30</a> challenge</h3>
+          <a class="projects__grid__item__link" href="js30/index.html" target="_blank">View More</a>
+        </div>
+        <div class="project-tile projects__grid__item">
+          <div class="projects__grid__item__thumbnail"></div>
+          <h3 class="projects__grid__item__title">CSS Grid Exercises/Projects</h3>
+          <a class="projects__grid__item__link" href="griddyup/griddyup.html" target="_blank">View More</a>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h1 class="section__divider">Contact</h1>
+      <h2 class="section__desc">My Social Media Links</h2>
+      <div class="contact__grid">
+        <a href="mailto:insidiae423@gmail.com" class="contact__grid__item" target="_blank">
+          <i class="contact__grid__item__icon far fa-envelope"></i>
+        </a>
+        <a href="https://www.facebook.com/abafadb.423423423" class="contact__grid__item" target="_blank">
+          <i class="contact__grid__item__icon fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/insidiae423/" class="contact__grid__item" target="_blank">
+          <i class="contact__grid__item__icon fab fa-linkedin-in"></i>
+        </a>
+        <a id="profile-link" href="https://www.freecodecamp.org/insidiae" class="contact__grid__item" target="_blank">
+          <i class="contact__grid__item__icon fab fa-free-code-camp"></i>
+        </a>
+        <a href="https://github.com/Insidiae/" class="contact__grid__item" target="_blank">
+          <i class="contact__grid__item__icon fab fa-github"></i>
+        </a>
+        <a href="https://codepen.io/Insidiae/" class="contact__grid__item" target="_blank">
+          <i class="contact__grid__item__icon fab fa-codepen"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Uncomment the script below to view tests for this page -->
+  <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
 </body>
 
 </html>

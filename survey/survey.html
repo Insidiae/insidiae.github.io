@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu:500" rel="stylesheet">
   <link rel="stylesheet" href="survey.css">
   <title>freeCodeCamp: Build a Survey Form</title>
 </head>
@@ -12,57 +13,140 @@
 <body>
   <h1 id="title">Survey Form</h1>
   <main class="survey">
-    <p id="description" class="survey__description">Some generic description</p>
+    <p id="description" class="survey__description">Help us improve our next events by filling out this form!</p>
     <form id="survey-form" class="survey__form">
-      <div class="survey__form__input-area">
-        <label for="name" id="name-label" class="survey__form__label survey__form__label--required">Name</label>
-        <input type="text" name="name" id="name" placeholder="Your name" class="survey__form__input survey__form__input--tbox" required>
+      <label for="name" id="name-label" class="survey__form__label survey__form__label--required">Name</label>
+      <input type="text" name="name" id="name" placeholder="Your name" class="survey__form__input survey__form__input--tbox" required>
+      <label for="email" id="email-label" class="survey__form__label survey__form__label--required">Email</label>
+      <input type="email" name="email" id="email" placeholder="Your email address" class="survey__form__input survey__form__input--tbox"
+        required>
+      <label for="event" id="event-label" class="survey__form__label survey__form__label--required">Event</label>
+      <input type="text" name="event" placeholder="Event Title" class="survey__form__input survey__form__input--tbox" required>
+      <label for="number" id="number-label" class="survey__form__label survey__form__label--required">Group Size</label>
+      <input type="number" name="groupSize" id="number" min="1" max="10" step="1" placeholder="How many people in your group?"
+        class="survey__form__input survey__form__input--tbox" required>
+      <label for="dropdown" class="survey__form__label survey__form__label--required">Occupation</label>
+      <select name="occupation" id="dropdown" class="survey__form__input survey__form__input--tbox" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="alumni">Alumni</option>
+        <option value="faculty">Faculty/Staff</option>
+        <option value="other">Other</option>
+      </select>
+      <fieldset class="survey__form__fieldset">
+        <legend class="survey__form__fieldset__label">How did you hear about this event?</legend>
+        <div class="survey__form__fieldset__field">
+          <input type="checkbox" name="promotions" id="cb-poster" value="poster">
+          <label for="cb-poster" class="survey__form__label">Posters/Flyers</label>
+        </div>
+        <div class="survey__form__fieldset__field">
+          <input type="checkbox" name="promotions" id="cb-email" value="email">
+          <label for="cb-email" class="survey__form__label">Email</label>
+        </div>
+        <div class="survey__form__fieldset__field">
+          <input type="checkbox" name="promotions" id="cb-social" value="social">
+          <label for="cb-social" class="survey__form__label">Social Media</label>
+        </div>
+        <div class="survey__form__fieldset__field">
+          <input type="checkbox" name="promotions" id="cb-friend" value="friend">
+          <label for="cb-friend" class="survey__form__label">Friends/Word-of-Mouth</label>
+        </div>
+        <div class="survey__form__fieldset__field">
+          <input type="checkbox" name="promotions" id="cb-repeat" value="repeat">
+          <label for="cb-repeat" class="survey__form__label">I've attended this event before</label>
+        </div>
+      </fieldset>
+      <div class="survey__form__table-container">
+        <table class="survey__form__table">
+          <thead class="survey__form__table__header">
+            <th></th>
+            <th class="survey__form__table__header__field">Strongly Disagree</th>
+            <th class="survey__form__table__header__field">Disagree</th>
+            <th class="survey__form__table__header__field">Neutral</th>
+            <th class="survey__form__table__header__field">Agree</th>
+            <th class="survey__form__table__header__field">Strongly Agree</th>
+          </thead>
+          <tbody>
+            <tr class="survey__form__table__row">
+              <td class="survey__form__table__elem survey__form__table__elem--question">The information provided at this event is relevant to you.</td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="relevance" id="relevance-1" value="1" required>
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="relevance" id="relevance-2" value="2">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="relevance" id="relevance-3" value="3">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="relevance" id="relevance-4" value="4">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="relevance" id="relevance-5" value="5">
+              </td>
+            </tr>
+            <tr class="survey__form__table__row">
+              <td class="survey__form__table__elem survey__form__table__elem--question">The speaker's delivery of the topic is engaging.</td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="delivery" id="delivery-1" value="1" required>
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="delivery" id="delivery-2" value="2">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="delivery" id="delivery-3" value="3">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="delivery" id="delivery-4" value="4">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="delivery" id="delivery-5" value="5">
+              </td>
+            </tr>
+            <tr class="survey__form__table__row">
+              <td class="survey__form__table__elem survey__form__table__elem--question">You would recommend this event to others.</td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="recommend" id="recommend-1" value="1" required>
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="recommend" id="recommend-2" value="2">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="recommend" id="recommend-3" value="3">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="recommend" id="recommend-4" value="4">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="recommend" id="recommend-5" value="5">
+              </td>
+            </tr>
+            <tr class="survey__form__table__row">
+              <td class="survey__form__table__elem survey__form__table__elem--question">Overall, this event was worthwhile.</td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="overall" id="overall-1" value="1" required>
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="overall" id="overall-2" value="2">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="overall" id="overall-3" value="3">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="overall" id="overall-4" value="4">
+              </td>
+              <td class="survey__form__table__elem">
+                <input type="radio" name="overall" id="overall-5" value="5">
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="survey__form__input-area">
-        <label for="email" id="email-label" class="survey__form__label survey__form__label--required">Email</label>
-        <input type="email" name="email" id="email" placeholder="Your email address" class="survey__form__input survey__form__input--tbox"
-          required>
+      <label for="suggestions" id="suggestions-label" class="survey__form__label">Comments/Suggestions</label>
+      <textarea name="suggestions" id="suggestions" class="survey__form__input survey__form__input--tarea" placeholder="What's on your mind?"></textarea>
+      <div class="survey__form__submit-area">
+        <button type="submit" id="submit" class="survey__form__submit">Submit</button>
       </div>
-      <div class="survey__form__input-area">
-        <label for="number" id="number-label" class="survey__form__label">Number Input</label>
-        <input type="number" name="number" id="number" min="0" max="9000" placeholder="Some numeric input" class="survey__form__input survey__form__input--tbox">
-      </div>
-      <div class="survey__form__input-area">
-        <label for="dropdown" class="survey__form__label">Dropdown</label>
-        <select name="dropdown" id="dropdown">
-          <option value="" disabled selected>Select an option</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-      </div>
-      <div class="survey__form__input-area">
-        <fieldset class="survey__form__fieldset">
-          <legend class="survey__form__fieldset__label">Some Radio buttons</legend>
-          <label for="radio1">Radio Button 1</label>
-          <input type="radio" name="radio" id="radio1" value="1">
-          <label for="radio2">Radio Button 2</label>
-          <input type="radio" name="radio" id="radio2" value="2">
-          <label for="radio3">Radio Button 3</label>
-          <input type="radio" name="radio" id="radio3" value="3">
-        </fieldset class="survey__form__fieldset">
-      </div>
-      <div class="survey__form__input-area">
-        <fieldset>
-          <legend class="survey__form__fieldset__label">Some Checkboxes</legend>
-          <label for="cb1">Checkbox 1</label>
-          <input type="checkbox" name="checkbox" id="cb1" value="1">
-          <label for="cb2">Checkbox 2</label>
-          <input type="checkbox" name="checkbox" id="cb2" value="2">
-          <label for="cb3">Checkbox 3</label>
-          <input type="checkbox" name="checkbox" id="cb3" value="3">
-        </fieldset>
-      </div>
-      <div class="survey__form__input-area">
-        <label for="suggestions" id="suggestions-label" class="survey__form__label">Comments/Suggestions</label>
-        <textarea name="suggestions" id="suggestions" placeholder="Enter your comments or suggestions here!"></textarea>
-      </div>
-      <button type="submit" id="submit" class="survey__form__submit">Submit</button>
     </form>
   </main>
 

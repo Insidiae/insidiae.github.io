@@ -1,0 +1,3 @@
+.survey__form__label--required::before {
+  content: "*";
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="survey.css">
+  <title>freeCodeCamp: Build a Survey Form</title>
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <main class="survey">
+    <p id="description" class="survey__description">Some generic description</p>
+    <form id="survey-form" class="survey__form">
+      <div class="survey__form__input-area">
+        <label for="name" id="name-label" class="survey__form__label survey__form__label--required">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your name" class="survey__form__input survey__form__input--tbox" required>
+      </div>
+      <div class="survey__form__input-area">
+        <label for="email" id="email-label" class="survey__form__label survey__form__label--required">Email</label>
+        <input type="email" name="email" id="email" placeholder="Your email address" class="survey__form__input survey__form__input--tbox"
+          required>
+      </div>
+      <div class="survey__form__input-area">
+        <label for="number" id="number-label" class="survey__form__label">Number Input</label>
+        <input type="number" name="number" id="number" min="0" max="9000" placeholder="Some numeric input" class="survey__form__input survey__form__input--tbox">
+      </div>
+      <div class="survey__form__input-area">
+        <label for="dropdown" class="survey__form__label">Dropdown</label>
+        <select name="dropdown" id="dropdown">
+          <option value="" disabled selected>Select an option</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+      <div class="survey__form__input-area">
+        <fieldset class="survey__form__fieldset">
+          <legend class="survey__form__fieldset__label">Some Radio buttons</legend>
+          <label for="radio1">Radio Button 1</label>
+          <input type="radio" name="radio" id="radio1" value="1">
+          <label for="radio2">Radio Button 2</label>
+          <input type="radio" name="radio" id="radio2" value="2">
+          <label for="radio3">Radio Button 3</label>
+          <input type="radio" name="radio" id="radio3" value="3">
+        </fieldset class="survey__form__fieldset">
+      </div>
+      <div class="survey__form__input-area">
+        <fieldset>
+          <legend class="survey__form__fieldset__label">Some Checkboxes</legend>
+          <label for="cb1">Checkbox 1</label>
+          <input type="checkbox" name="checkbox" id="cb1" value="1">
+          <label for="cb2">Checkbox 2</label>
+          <input type="checkbox" name="checkbox" id="cb2" value="2">
+          <label for="cb3">Checkbox 3</label>
+          <input type="checkbox" name="checkbox" id="cb3" value="3">
+        </fieldset>
+      </div>
+      <div class="survey__form__input-area">
+        <label for="suggestions" id="suggestions-label" class="survey__form__label">Comments/Suggestions</label>
+        <textarea name="suggestions" id="suggestions" placeholder="Enter your comments or suggestions here!"></textarea>
+      </div>
+      <button type="submit" id="submit" class="survey__form__submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

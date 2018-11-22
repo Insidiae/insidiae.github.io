@@ -1,0 +1,22 @@
+.header {
+  // The header/navbar is an essential part of the website's general layout
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+
+  &__img {
+    margin-right: auto;
+  }
+}
+.nav-bar {
+
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+
+  &__item {
+    margin-right: 2rem;
+  }
+}

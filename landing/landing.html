@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>freeCodeCamp: Build a Product Landing Page</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <img
+        src="assets/img/logo.png"
+        alt="Aperture Laboratories"
+        id="header-img"
+        class="header__img"
+      />
+      <nav id="nav-bar" class="nav-bar">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="#intro" class="nav-link nav-list__link">About Us</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#products" class="nav-link nav-list__link">Products</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#research" class="nav-link nav-list__link">Research</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#contact" class="nav-list__link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section id="intro" class="intro">
+        <!--
+          TODO: This section should describe the product and what it's for
+        -->
+        <iframe
+          id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/6i-nMWgBUp0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <section id="contact" class="contact">
+        <!-- TODO: Add more input fields to this form, maybe? -->
+        <!-- This should be where the user can order the product -->
+        <form
+          method="POST"
+          action="https://www.freecodecamp.com/email-submit"
+          id="form"
+          class="form"
+        >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            class="form__input"
+            required
+          />
+          <input id="submit" type="submit" class="form__submit" />
+        </form>
+      </section>
+      <section id="products" class="products">
+        <!-- TODO: Add the other Aperture products here! -->
+        OTHER PRODUCTS
+      </section>
+      <section id="research" class="research">
+        <!--
+          TODO: Add some nice elements to attact potential test subjects here!
+        -->
+      </section>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

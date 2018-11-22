@@ -1,0 +1,25 @@
+{
+  "name": "fcc-landing",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Landing Page Project",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass assets/sass/main.scss assets/css/style.css -w",
+    "live": "live-server --entry-file=\"./landing.html\" --ignore=**/sass/**",
+    "start": "npm-run-all --parallel live watch:sass",
+    "test:sass": "node-sass assets/sass/main.scss assets/css/style.css",
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/style.comp.css -o assets/css/style.prefix.css",
+    "compress:css": "node-sass assets/css/style.prefix.css assets/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Kobe Bryant Ruado",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.6.2",
+    "concat": "^1.0.3",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^5.0.0"
+  }
+}

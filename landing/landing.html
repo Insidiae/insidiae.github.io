@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta
+      property="og:url"
+      content="https://insidiae.github.io/advanced-css-and-sass/index.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Meet the Turrets (WIP)" />
+    <meta
+      property="og:description"
+      content="freeCodeCamp Project: Build a Product Landing Page"
+    />
+    <meta
+      property="og:image"
+      content="https://insidiae.github.io/landing/assets/img/turret-colors.jpg"
+    />
+    <meta property="og:image:alt" content="Meet the Turrets (WIP)" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Meet the Turrets (WIP)" />
+    <meta
+      name="twitter:image"
+      content="https://insidiae.github.io/landing/assets/img/turret-colors.jpg"
+    />
+    <meta name="twitter:image:alt" content="Meet the Turrets (WIP)" />
+    <meta
+      name="twitter:description"
+      content="freeCodeCamp Project: Build a Product Landing Page"
+    />
+
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>freeCodeCamp: Build a Product Landing Page</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico" />
+
+    <title>Aperture Products - Sentry Turrets</title>
   </head>
   <body>
     <header id="header" class="header">
@@ -17,7 +51,7 @@
       />
       <nav id="nav-bar" class="nav-bar">
         <ul class="nav-list">
-          <li class="nav-list__item">
+          <li class="nav-list__item nav-list__item--active">
             <a href="#intro" class="nav-link nav-list__link">About Us</a>
           </li>
           <li class="nav-list__item">
@@ -34,6 +68,22 @@
     </header>
     <main class="main">
       <section id="intro" class="intro">
+        <img
+          src="assets/img/turrets-large.jpg"
+          alt="Meet the Turret"
+          class="intro__bg u-img-dim"
+        />
+        <div class="intro__text">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">Meet the Turret</span>
+            <span class="heading-primary--sub">
+              Military-grade protection. Perfected by science. Brought to your
+              home.
+            </span>
+          </h1>
+        </div>
+      </section>
+      <section class="description">
         <!--
           TODO: This section should describe the product and what it's for
         -->

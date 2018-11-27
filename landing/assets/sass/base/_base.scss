@@ -7,6 +7,11 @@
   box-sizing: inherit;
 }
 
+body {
+  box-sizing: border-box;
+  padding-top: calc(10.5rem + 1px);
+}
+
 /* Set initial font size */
 html {
   // This defines what 1rem is

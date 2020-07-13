@@ -6,3 +6,17 @@
 .u-img-dim {
   filter: brightness(0.7);
 }
+
+.u-margin-bottom {
+  &--sm {
+    margin-bottom: 4rem;
+  }
+
+  &--md {
+    margin-bottom: 6rem;
+  }
+
+  &--lg {
+    margin-bottom: 8rem;
+  }
+}

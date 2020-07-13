@@ -6,9 +6,12 @@
 @import "base/typography";
 @import "base/utils";
 
+@import "components/button";
+@import "components/figure";
 @import "components/form";
+@import "components/showcase";
 
-@import "layout/intro";
+@import "layout/banner";
 @import "layout/navigation";
 
 @import "pages/products";

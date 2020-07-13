@@ -1,0 +1,44 @@
+// All-purpose styles for buttons (and links that look like buttons)
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    position: relative;
+    background-color: $color-primary;
+    color: white;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 0.3rem 3rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    border-radius: 1rem;
+    transition: all 0.2s;
+
+    // for <button> elements
+    border: none;
+    cursor: pointer;
+  }
+
+  &--lg,
+  &--lg:link,
+  &--lg:visited {
+    font-family: "Open Sans", Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    padding: .8rem 4.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    background-color: $color-secondary;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+}

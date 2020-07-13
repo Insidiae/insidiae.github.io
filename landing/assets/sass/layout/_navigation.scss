@@ -15,6 +15,18 @@
   &__img {
     max-height: 7.5rem;
     margin-right: auto;
+
+    @media (max-width: 1300px) {
+      margin-right: unset;
+    }
+  }
+
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
 .nav-bar {
@@ -29,6 +41,18 @@
     position: relative;
     padding: 1rem 2rem;
 
+    // &:before {
+    //   content: '';
+    //   width: 2px;
+    //   background: #E1E1E1;
+    //   height: 100%;
+    //   left: 0;
+    //   position: absolute;
+    //   transform: skew(-20deg);
+    //   top: 0;
+    //   bottom: 0;
+    // }
+
     &:after {
       content: '';
       height: 2px;
@@ -40,7 +64,7 @@
       transform-origin: left;
       transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
       left: 50%;
-      margin-top: 0.7rem;
+      bottom: 0.5rem;
     }
 
     &:hover {
@@ -65,6 +89,7 @@
   &__link:link,
   &__link:visited {
     text-decoration: none;
+    font-style: italic;
     text-transform: uppercase;
     font-weight: 500;
     color: black;

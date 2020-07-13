@@ -1,11 +1,11 @@
 // We'll set our project-wide font definitions here!
 body {
-  font-family: "Segoe UI", "Helvetica", sans-serif;
+  font-family: "Roboto", "Segoe UI", "Helvetica", sans-serif;
 }
 
-// The intro section uses this heading.
+// The top banner uses this heading.
 .heading-primary {
-  font-family: "Helvetica", "Segoe UI", sans-serif;
+  font-family: "Roboto", "Helvetica", "Segoe UI", sans-serif;
   color: #FFF;
   text-transform: uppercase;
   backface-visibility: hidden;
@@ -15,7 +15,8 @@ body {
     display: block;
     margin-bottom: 1.5rem;
     font-size: 6rem;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: italic;
     letter-spacing: 2rem;
     text-indent: 2rem; // Also applies some spacing to the left side of the first character
     animation: fadeInLeft 1s ease-out;
@@ -23,10 +24,20 @@ body {
 
   &--sub {
     display: block;
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: .75rem;
     text-indent: .75rem;
     animation: fadeInRight 1s ease-out;
   }
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 4.5rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $color-dark;
+  letter-spacing: 2px;
 }

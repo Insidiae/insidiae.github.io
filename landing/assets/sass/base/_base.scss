@@ -10,6 +10,8 @@
 body {
   box-sizing: border-box;
   padding-top: calc(10.5rem + 1px);
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* Set initial font size */
@@ -17,4 +19,9 @@ html {
   // This defines what 1rem is
   // default font size is usually 16px
   font-size: 62.5%; // 62.5% of 16px = 10px
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }

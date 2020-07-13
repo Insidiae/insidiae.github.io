@@ -7,7 +7,7 @@
 
     <meta
       property="og:url"
-      content="https://insidiae.github.io/advanced-css-and-sass/index.html"
+      content="https://insidiae.github.io/landing/landing.html"
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Meet the Turrets (WIP)" />
@@ -36,6 +36,7 @@
       content="freeCodeCamp Project: Build a Product Landing Page"
     />
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico" />
 
@@ -52,7 +53,7 @@
       <nav id="nav-bar" class="nav-bar">
         <ul class="nav-list">
           <li class="nav-list__item nav-list__item--active">
-            <a href="#intro" class="nav-link nav-list__link">About Us</a>
+            <a href="#banner" class="nav-link nav-list__link">About Us</a>
           </li>
           <li class="nav-list__item">
             <a href="#products" class="nav-link nav-list__link">Products</a>
@@ -66,14 +67,15 @@
         </ul>
       </nav>
     </header>
+
     <main class="main">
-      <section id="intro" class="intro">
+      <section id="banner" class="banner u-margin-bottom--lg">
         <img
           src="assets/img/turrets-large.jpg"
           alt="Meet the Turret"
-          class="intro__bg u-img-dim"
+          class="banner__bg u-img-dim"
         />
-        <div class="intro__text">
+        <div class="banner__text">
           <h1 class="heading-primary">
             <span class="heading-primary--main">Meet the Turret</span>
             <span class="heading-primary--sub">
@@ -83,48 +85,221 @@
           </h1>
         </div>
       </section>
-      <section class="description">
+
+      <section class="intro u-margin-bottom--lg">
+        <div class="u-center-text">
+          <h2 class="heading-secondary">Introducing the Turret</h2>
+        </div>
+        <figure class="figure">
+          <figcaption class="figure__caption u-center-text">
+            <p class="figure__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              pretium ante velit, eget ultricies purus vulputate ut. In odio
+              lacus, tempor pulvinar sapien ut, fringilla ullamcorper metus.
+            </p>
+          </figcaption>
+          <div class="figure__subject">
+            <iframe
+              id="video"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/6i-nMWgBUp0"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+      </section>
+
+      <section class="description u-margin-bottom--lg">
         <!--
           TODO: This section should describe the product and what it's for
         -->
-        <iframe
-          id="video"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/6i-nMWgBUp0"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div class="u-center-text u-margin-bottom--md">
+          <h2 class="heading-secondary">Features</h2>
+        </div>
+          <!-- TODO: Display some Features (maybe 3 or 4) in one neat row -->
+        <figure class="figure figure--alt u-margin-bottom--md">
+          <div class="figure__subject">
+            <img
+              src="assets/img/bullet-capacity.png"
+              alt=""
+              class="figure__image"
+            />
+          </div>
+          <figcaption class="figure__caption u-center-text">
+            <h3 class="figure__heading">Larger Bullet Capacity</h2>
+            <p class="figure__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus pretium ante velit, eget ultricies purus vulputate ut.
+              In odio lacus, tempor pulvinar sapien ut, fringilla ullamcorper
+              metus.
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="figure u-margin-bottom--md">
+          <figcaption class="figure__caption u-center-text">
+            <h3 class="figure__heading">WE FIRE THE WHOLE BULLET</h2>
+            <p class="figure__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus pretium ante velit, eget ultricies purus vulputate ut.
+              In odio lacus, tempor pulvinar sapien ut, fringilla ullamcorper
+              metus.
+            </p>
+          </figcaption>
+          <div class="figure__subject">
+            <video class="figure__video" autoplay muted loop>
+              <source src="assets/whole-bullet-firing.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </figure>
+        <figure class="figure figure--alt u-margin-bottom--md">
+          <div class="figure__subject">
+            <img
+              class="figure__image"
+              src="assets/img/turret-firing-borderless.png"
+              alt=""
+            />
+          </div>
+          <figcaption class="figure__caption u-center-text">
+            <h3 class="figure__heading">Military-Grade Protection</h2>
+            <p class="figure__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus pretium ante velit, eget ultricies purus vulputate ut.
+              In odio lacus, tempor pulvinar sapien ut, fringilla ullamcorper
+              metus.
+            </p>
+          </figcaption>
+        </figure>
+        <!-- TODO: Features (maybe 3 or 4) in one neat row end here -->
+
+        <div class="designer-colors">
+          <div class="figure">
+            <div class="figure__caption u-center-text">
+              <h2 class="figure__heading">Customize your Turret</h2>
+              <p class="figure__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus pretium ante velit, eget ultricies purus vulputate ut.
+              </p>
+            </div>
+            <video class="figure__video" autoplay muted loop>
+              <source src="assets/turret-colors.mp4" />
+            </video>
+          </div>
+        </div>
+
+        <div class="delivery">
+          <!-- TODO: We box 'em up and ship 'em straight to your doorstep! -->
+        </div>
       </section>
-      <section id="contact" class="contact">
-        <!-- TODO: Add more input fields to this form, maybe? -->
-        <!-- This should be where the user can order the product -->
-        <form
-          method="POST"
-          action="https://www.freecodecamp.com/email-submit"
-          id="form"
-          class="form"
-        >
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-            class="form__input"
-            required
-          />
-          <input id="submit" type="submit" class="form__submit" />
-        </form>
+
+      <section class="cta u-margin-bottom--lg">
+        <!-- TODO: Protect the things that matter most. -->
+        <div class="showcase">
+          <div class="showcase__caption u-center-text">
+            <h2 class="showcase__heading">
+              Protect the Things that Matter Most.
+            </h2>
+            <p class="showcase__text u-margin-bottom--sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus pretium ante velit, eget ultricies purus vulputate ut.
+            </p>
+            <a href="#" class="btn">Order Now</a>
+          </div>
+          <video class="showcase__bg u-img-dim" autoplay muted loop>
+            <source src="assets/turret-drop.mp4" />
+          </video>
+        </div>
       </section>
-      <section id="products" class="products">
+
+      <section id="products" class="products u-margin-bottom--lg">
         <!-- TODO: Add the other Aperture products here! -->
-        OTHER PRODUCTS
+        <h2 class="heading-secondary">You Might Also Like</h2>
+        <div class="product-list">
+          <figure class="product-card">
+            <div class="product-card__item">
+              <img
+                src="assets/img/long_fall_boots.jpg"
+                alt="Aperture Science Long Fall Boots"
+                class="product-card__img"
+              />
+            </div>
+            <figcaption class="product-card__details">
+              <h3 class="product-card__name">Long Fall Boots</h3>
+              <p class="product-card__description">
+                Lorem Ipsum dolor sit amet , consectetur adipiscing elit.
+              </p>
+              <a href="https://www.youtube.com/watch?v=wX9Sc88qreg" class="product-card__link">&gt;</a>
+            </figcaption>
+          </figure>
+          <figure class="product-card">
+            <div class="product-card__item">
+              <img
+                src="assets/img/atlas_and_p-body.png"
+                alt="Aperture Science Robotic Testing Associates"
+                class="product-card__img"
+              />
+            </div>
+            <figcaption class="product-card__details">
+              <h3 class="product-card__name">Robotic Test Subjects</h3>
+              <p class="product-card__description">
+                Lorem Ipsum dolor sit amet , consectetur adipiscing elit.
+              </p>
+              <a href="https://www.youtube.com/watch?v=AZMSAzZ76EU" class="product-card__link">&gt;</a>
+            </figcaption>
+          </figure>
+          <figure class="product-card">
+            <div class="product-card__item">
+              <img
+                src="assets/img/panels.jpg"
+                alt="Aperture Science Panels"
+                class="product-card__img"
+              />
+            </div>
+            <figcaption class="product-card__details">
+              <h3 class="product-card__name">Panels</h3>
+              <p class="product-card__description">
+                Lorem Ipsum dolor sit amet , consectetur adipiscing elit.
+              </p>
+              <a href="https://www.youtube.com/watch?v=0qcED35LL8I" class="product-card__link">&gt;</a>
+            </figcaption>
+          </figure>
+        </div>
       </section>
+
       <section id="research" class="research">
         <!--
           TODO: Add some nice elements to attact potential test subjects here!
         -->
+        <div class="showcase">
+          <div class="showcase__caption u-center-text">
+            <h2 class="showcase__heading">
+              The Perpetual Research Initiative
+            </h2>
+            <p class="showcase__text u-margin-bottom--sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus pretium ante velit, eget ultricies purus vulputate ut.
+            </p>
+            <form
+              method="POST"
+              action="https://www.freecodecamp.com/email-submit"
+              id="form"
+              class="form"
+            >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                class="form__input"
+                required
+              />
+              <input id="submit" type="submit" class="form__submit" />
+            </form>
+          </div>
+          <img src="assets/img/aperture_science_isometric_room.png" alt="Perpetual Testing Initiative" class="showcase__bg u-img-dim">
+        </div>
       </section>
     </main>
 

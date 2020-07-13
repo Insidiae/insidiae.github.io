@@ -1,3 +1,77 @@
-.products {
-  // The Products section can be reused across multiple pages
+// This section can be reused across multiple pages
+.product-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+
+.product-card {
+  display: flex;
+  margin: 1.5rem;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  width: 40rem; // 80vw on phone
+  height: 50rem; // 60rem on phone
+  border-radius: 1rem;
+  box-shadow: -1.5rem 1.5rem 3rem rgba($color-gray, 0.7);
+
+  &__item {
+    margin: 3rem 0;
+    width: 22rem;
+    height: 22rem;
+    border: 0.7rem solid $color-dark;
+    border-radius: 50%;
+    box-shadow: -1.5rem 1.5rem 1.5rem rgba($color-gray, 0.6);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  &__details {
+    padding: 1.5rem 2rem;
+  }
+
+  &__name {
+    color: $color-primary;
+    font-weight: 600;
+    font-size: 3rem;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    display: block;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid $color-dark;
+    border-radius: 50%;
+    color: $color-dark;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
 }

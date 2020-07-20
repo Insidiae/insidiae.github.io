@@ -6,7 +6,7 @@
   justify-content: space-around;
   align-items: center;
   // TODO: find a more elegant way to set a consistent height
-  height: 50rem;
+  height: fit-content;
 
   &--alt {
     flex-wrap: wrap-reverse;
@@ -20,24 +20,44 @@
     // can maybe replace width with flex(-basis)
     display: flex;
     // width: 40%;
-    flex: 1 0 50rem;
-    height: 100%;
+    flex: 1 1 50rem;
     justify-content: center;
     align-items: center;
+    margin-bottom: 4rem;
+    max-width: 40vw;
+
+    @include respond(tab-port) {
+      max-width: 80vw;
+    }
   }
 
   &__image {
-    height: inherit;
+    // height: inherit;
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+    border-radius: 1rem;
+    max-height: 50rem;
   }
 
   &__video {
-    height: inherit;
+    // height: inherit;
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+    border-radius: 1rem;
+    max-height: 50rem;
   }
 
   &__caption {
     // width: 40%;
-    flex: 1 0 50rem;
+    flex: 1 1 50rem;
     order: 0;
+    max-width: 40vw;
+
+    @include respond(tab-port) {
+      max-width: 80vw;
+    }
   }
 
   &__heading {

@@ -9,7 +9,7 @@
 
 body {
   box-sizing: border-box;
-  padding-top: calc(10.5rem + 1px);
+  padding-top: $header-height;
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -17,8 +17,20 @@ body {
 /* Set initial font size */
 html {
   // This defines what 1rem is
-  // default font size is usually 16px
+  // default font size i usually 16px
   font-size: 62.5%; // 62.5% of 16px = 10px
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 75% of 16px = 12px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 56.25% of 16px = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 50% of 16px = 8px
+  }
 }
 
 a {

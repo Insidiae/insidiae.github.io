@@ -14,20 +14,20 @@ body {
   &--main {
     display: block;
     margin-bottom: 1.5rem;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 700;
     font-style: italic;
-    letter-spacing: 2rem;
-    text-indent: 2rem; // Also applies some spacing to the left side of the first character
+    letter-spacing: 1.67rem;
+    text-indent: 1.67rem; // Also applies some spacing to the left side of the first character
     animation: fadeInLeft 1s ease-out;
   }
 
   &--sub {
     display: block;
-    font-size: 2.25rem;
+    font-size: 1.875rem;
     font-weight: 700;
-    letter-spacing: .75rem;
-    text-indent: .75rem;
+    letter-spacing: .625rem;
+    text-indent: .625rem;
     animation: fadeInRight 1s ease-out;
   }
 }

@@ -1,0 +1,71 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-dark-2;
+  color: #FFF;
+
+  @include respond(phone) {
+    align-items: center;
+  }
+
+  &__img {
+    height: 6.5rem;
+  }
+
+  &-top {
+    padding: 1.5rem 3rem;
+  }
+
+  &__brand {
+    margin-bottom: 2rem;
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    @include respond(phone) {
+      justify-content: center;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+  }
+
+  &__legal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: 1.25rem;
+    transition: color 0.2s;
+    &:hover {
+      color: $color-primary;
+    }
+    &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid $color-gray;
+    padding: 1rem 3rem;
+  }
+
+  &__project-info {
+    font-size: 1.25rem;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+}

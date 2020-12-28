@@ -157,10 +157,8 @@ body {
   transition: transform 0.3s;
   flex: 0 0 35rem; }
   .feature-card__icon {
-    font-size: 6.4rem;
-    color: #73D4F1; }
+    font-size: 6.4rem; }
   .feature-card__title {
-    color: #FF9A00;
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -218,7 +216,8 @@ body {
 
 .showcase {
   position: relative;
-  width: 100vw; }
+  width: 100vw;
+  height: calc(100vh - calc(6.5rem + 3rem + 1px)); }
   .showcase__caption {
     width: 80%;
     position: absolute;
@@ -238,7 +237,7 @@ body {
   .showcase__bg {
     position: relative;
     width: 100%;
-    height: calc(100vh - calc(6.5rem + 3rem + 1px));
+    height: 100%;
     object-fit: cover;
     object-position: center;
     z-index: 0; }
@@ -258,6 +257,54 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #414042;
+  color: #FFF; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      align-items: center; } }
+  .footer__img {
+    height: 6.5rem; }
+  .footer-top {
+    padding: 1.5rem 3rem; }
+  .footer__brand {
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__brand {
+        text-align: center; } }
+  .footer__links {
+    display: flex; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__links {
+        justify-content: center; } }
+  .footer__about {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem; }
+  .footer__legal {
+    display: flex;
+    flex-direction: column; }
+  .footer__heading {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-transform: uppercase; }
+  .footer__link {
+    font-size: 1.25rem;
+    transition: color 0.2s; }
+    .footer__link:hover {
+      color: #73D4F1; }
+    .footer__link:active {
+      color: #FF9A00; }
+  .footer-bottom {
+    border-top: 1px solid #BBBDC0;
+    padding: 1rem 3rem; }
+  .footer__project-info {
+    font-size: 1.25rem;
+    font-style: italic;
+    text-transform: uppercase; }
 
 .header {
   display: flex;

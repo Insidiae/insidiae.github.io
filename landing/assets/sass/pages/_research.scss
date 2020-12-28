@@ -1,3 +1,40 @@
 .research {
   // The Research section can be reused across multiple pages
+  &__signup-form {
+    &__input {
+      font-size: 1.3rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+    }
+
+    &__submit {
+      display: inline-block;
+      position: relative;
+      background-color: $color-primary;
+      color: white;
+      font-size: 1.3rem;
+      text-decoration: none;
+      padding: 0.3rem 2rem;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.7;
+      border-radius: 1rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-3px);
+        background-color: $color-secondary;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
 }

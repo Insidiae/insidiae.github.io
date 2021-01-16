@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <title>Score Keeper Refactor ft. Bulma</title>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img
+                    src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <header class="card-header">
+                <p class="card-header-title">Ping Pong Score Keeper</p>
+              </header>
+              <div class="card-content">
+                <h1 class="title is-1">
+                  <span id="p1Score">0</span> to <span id="p2Score">0</span
+                  ><span id="deuce" class="tag is-warning is-hidden ml-2"
+                    >Deuce!</span
+                  >
+                </h1>
+                <p class="subtitle">Use the buttons below to keep score</p>
+                <div class="field has-addons">
+                  <p class="control">
+                    <a href="#" class="button is-static">Playing to: </a>
+                  </p>
+                  <p class="control">
+                    <input class="input" type="number" min="1" value="3" />
+                  </p>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <button
+                  class="button is-large is-primary card-footer-item"
+                  id="p1Button"
+                >
+                  +1 Player One
+                </button>
+                <button
+                  class="button is-large is-info card-footer-item"
+                  id="p2Button"
+                >
+                  +1 Player Two
+                </button>
+                <button
+                  class="button is-large is-danger card-footer-item"
+                  id="reset"
+                >
+                  Reset
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

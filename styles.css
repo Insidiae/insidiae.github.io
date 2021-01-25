@@ -1,77 +1,11 @@
 :root {
+  --color-primary: #588dfd;
   --project-tile-size: 250px;
   --social-link-size: 100px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: #689f38;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
-}
-
-/* Original Pure CSS Responsive Navbar design by JoGeek */
-/* https://codepen.io/jo_Geek/pen/xgbaEr */
 .navbar {
-  font-family: "Source Code Pro", monospace;
-  height: 50px;
-  width: 100%;
-  background-color: #6b8e23;
-  position: fixed;
-  z-index: 10;
-}
-
-.navbar > .nav-header {
-  display: inline;
-}
-
-.navbar > .nav-header > .nav-title {
-  font-family: "Ubuntu", sans-serif;
-  display: inline-block;
-  font-size: 22px;
-  color: #bdbdbd;
-  padding: 10px 10px 10px 10px;
-}
-
-.navbar > .nav-btn {
-  display: none;
-}
-
-.navbar > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-
-.navbar > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #dcedc8;
-}
-
-.navbar > .nav-links > a:hover {
-  background-color: #689f38;
-}
-
-.navbar > #nav-check {
-  display: none;
-}
-
-.container {
-  padding-top: 75px;
+  background-color: var(--color-primary);
 }
 
 .welcome {
@@ -97,7 +31,7 @@ body {
 }
 
 .section__divider {
-  background-color: #6b8e23;
+  background-color: var(--color-primary);
   color: #ecf0f1;
   font-size: 2.5rem;
   line-height: 50px;
@@ -130,9 +64,17 @@ body {
 }
 
 .projects__grid__item__thumbnail {
-  background-color: #588dfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--project-tile-size);
   height: var(--project-tile-size);
+}
+
+.projects__grid__item__thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: contain;
 }
 
 .projects__grid__item__title {
@@ -153,7 +95,7 @@ body {
   border-radius: 10px;
   margin: 0 auto;
   left: 50%;
-  background-color: #588dfd;
+  background-color: var(--color-primary);
   color: #ecf0f1;
   text-decoration: none;
   transition: background 0.2s;
@@ -161,6 +103,7 @@ body {
 
 .projects__grid__item__link:hover {
   background-color: #7fa7fd;
+  color: #ecf0f1;
   text-decoration: none;
 }
 
@@ -182,74 +125,28 @@ body {
   height: var(--social-link-size);
   border-radius: 50%;
   text-align: center;
-  border: 2px solid #689f38;
+  border: 2px solid var(--color-primary);
   transition: all 0.2s;
 }
 
 .contact__grid__item:hover {
-  background-color: #689f38;
-  color: #dcedc8;
+  background-color: var(--color-primary);
 }
 
-.contact__grid__item__icon {
-  line-height: var(--social-link-size);
+.bi {
+  color: var(--color-primary);
 }
 
-@media (max-width: 600px) {
-  :root {
-    --project-tile-size: 150px;
-    --social-link-size: 100px;
-  }
+.contact__grid__item svg {
+  height: 50%;
+  width: 50%;
+  fill: var(--color-primary);
+}
 
-  html {
-    font-size: 12px;
-  }
+.contact__grid__item:hover .bi {
+  color: #d7e3ff;
+}
 
-  .navbar > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .navbar > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .navbar > .nav-btn > label:hover {
-    background-color: #689f38;
-  }
-  .navbar > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #bdbdbd;
-  }
-  .navbar > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #757575;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .navbar > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .navbar > #nav-check:not(:checked) + .nav-links {
-    height: 0px;
-  }
-  .navbar > #nav-check:checked + .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-
-  .projects__grid__item__link {
-    width: 60%;
-  }
+.contact__grid__item:hover svg {
+  fill: #d7e3ff;
 }

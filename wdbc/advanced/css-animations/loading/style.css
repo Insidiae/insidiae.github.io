@@ -1,0 +1,108 @@
+html {
+  background: #ecf0f1;
+}
+
+body, h1, h2 {
+  font-family: Helvetica, Sans-serif;
+  color: #2c3e50;
+  margin:0;
+  padding:0;
+  font-weight:300;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 36px;
+  opacity: 0;
+  animation: appear 1s 3s forwards;
+}
+
+.container{
+  margin:4em;
+  text-align: center;
+}
+
+#loading-icon {
+  margin: 50px auto;
+  width: 120px;
+  height: 120px;
+  border: 16px solid #BDC3C7;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite, spin_colors 3s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  /*   25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  } */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin_colors {
+  0% {
+    border-color: #BDC3C7;
+  }
+  12.5% {
+    border-left-color: #588DFD;
+    border-bottom-color: #BDC3C7;
+    border-right-color: #BDC3C7;
+    border-top-color: #BDC3C7;
+  }
+  25% {
+    border-left-color: #588DFD;
+    border-bottom-color: #FD588D;
+    border-right-color: #BDC3C7;
+    border-top-color: #BDC3C7;
+  }
+  37.5% {
+    border-left-color: #588DFD;
+    border-bottom-color: #FD588D;
+    border-right-color: #FDCF58;
+    border-top-color: #BDC3C7;
+  }
+  50% {
+    border-left-color: #588DFD;
+    border-bottom-color: #FD588D;
+    border-right-color: #FDCF58;
+    border-top-color: #58FDC8;
+  }
+  62.5% {
+    border-left-color: #BDC3C7;
+    border-bottom-color: #FD588D;
+    border-right-color: #FDCF58;
+    border-top-color: #58FDC8;
+  }
+  75% {
+    border-left-color: #BDC3C7;
+    border-bottom-color: #BDC3C7;
+    border-right-color: #FDCF58;
+    border-top-color: #58FDC8;
+  }
+  87.5% {
+    border-left-color: #BDC3C7;
+    border-bottom-color: #BDC3C7;
+    border-right-color: #BDC3C7;
+    border-top-color: #58FDC8;
+  }
+}

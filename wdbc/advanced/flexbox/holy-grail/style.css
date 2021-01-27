@@ -1,0 +1,97 @@
+body {
+  /* My attempts go below this line */
+  background-color: #2C3E50;
+  font-family: Helvetica;
+  margin: 0;
+  /* Solution styles go below this line */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header{
+  /* My attempts go below this line */
+  background-color: #1ABC9C;
+  border-radius: 7px;
+  margin: 4px;
+  padding: 5px;
+  display: flex;
+  /* height: 10vh; */
+  justify-content: space-between;
+  align-items: center;
+  /* Solution styles go below this line */
+  flex-basis: 100px;
+}
+
+main {
+  /* My attempts go below this line */
+  display: flex;
+  /* height: 80vh; */
+  /* Solution styles go below this line */
+  flex-basis: 800px;
+}
+
+article{
+  /* My attempts go below this line */
+  border-radius: 7px;
+  margin: 4px;
+  padding: 5px;
+  background-color: #ECF0F1;
+  /* flex-grow: 3; */
+  /* Solution styles go below this line */
+  flex: 4 0 60%;
+
+}
+
+nav {
+  /* My attempts go below this line */
+  border-radius: 7px;
+  margin: 4px;
+  padding: 5px;
+  background-color: #95A5A6;
+  /* flex-grow: 1; */
+  order: -1;
+  /* Solution styles go below this line */
+  flex: 1 1 20%;
+}
+
+aside {
+  /* My attempts go below this line */
+  border-radius: 7px;
+  margin: 4px;
+  padding: 5px;
+  /* flex-grow: 1; */
+  background-color: #3498DB;
+  /* Solution styles go below this line */
+  flex: 1 1 20%;
+}
+
+footer {
+  /* My attempts go below this line */
+  border-radius: 7px;
+  margin: 4px;
+  padding: 5px;
+  background-color: #1ABC9C;
+  /* height: 10vh; */
+  /* Solution styles go below this line */
+  flex-basis: 100px;
+}
+
+@media all and (max-width: 640px) {
+  main {
+    /* My attempts go below this line */
+    flex-direction: column;
+    /* Solution styles go below this line */
+    flex-grow: 1;
+  }
+  nav {
+    /* My attempts go below this line */
+    order: 0;
+    /* Solution styles go below this line */
+  }
+}

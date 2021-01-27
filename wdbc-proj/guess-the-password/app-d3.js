@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
     d3.select("#guesses-remaining").text(`Guesses remaining: ${guessCount}.`);
   }
 
-  function updateGame() {
-    const target = d3.select(d3.event.target);
+  function updateGame(event) {
+    const target = d3.select(event.target);
     if (target.node().tagName === "LI" && !target.classed("disabled")) {
       // grab guessed word, check it against password, update view
       const guess = target.text();

@@ -8,8 +8,8 @@ function setPreview(val) {
 }
 
 d3.select('#new-note')
-  .on('submit', function() {
-    d3.event.preventDefault();
+  .on('submit', function(event) {
+    event.preventDefault();
     d3.select('#notes')
       .append('p')
         .classed('note', true)
@@ -25,7 +25,7 @@ d3.select('.remove')
     });
 
 input.on('input', function() {
-  console.log(input.property('value') === "");
+  // console.log(input.property('value') === "");
   setPreview(input.property('value'));
 });
 

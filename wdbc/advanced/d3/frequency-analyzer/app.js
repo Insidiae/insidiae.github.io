@@ -16,7 +16,7 @@ function getData(phrase) {
     if(!char) data.push({character: cur, count: 1});
     else char.count++;
     return data;
-  }, [])
+  }, []);
 }
 
 d3.select('form')
@@ -29,23 +29,23 @@ d3.select('form')
     const letters = d3.select('#letters').selectAll('.letter')
       .data(data, d => d.character);
 
-      letters
-        .classed('new', false)
-        .exit().remove();
+    letters
+      .classed('new', false)
+      .exit().remove();
 
-      letters.enter()
-        .append('div')
-        .classed('letter', true)
-        .classed('new', true)
-      .merge(letters)
-        .text(d => d.character)
-        .style('width', '20px')
-        .style('height', d => `${d.count * 20}px`)
-        .style('line-height', '20px')
-        .style('margin-right', '5px')
+    letters.enter()
+      .append('div')
+      .classed('letter', true)
+      .classed('new', true)
+    .merge(letters)
+      .text(d => d.character)
+      .style('width', '20px')
+      .style('height', d => `${d.count * 20}px`)
+      .style('line-height', '20px')
+      .style('margin-right', '5px');
 
     d3.select('#phrase')
-      .text(`Analysis of: "${phrase}"`)
+      .text(`Analysis of: "${phrase}"`);
 
     d3.select('#count')
       .text(`(New characters: ${letters.enter().nodes().length})`);

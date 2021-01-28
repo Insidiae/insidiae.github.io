@@ -24,7 +24,7 @@ function getData(phrase) {
     if(!char) data.push({character: cur, count: 1});
     else char.count++;
     return data;
-  }, [])
+  }, []);
 }
 
 d3.select('form')
@@ -41,35 +41,35 @@ d3.select('form')
     const letters = svg.selectAll('g')
       .data(data, d => d.character);
 
-      letters
-        .classed('new', false)
-        .exit().remove();
+    letters
+      .classed('new', false)
+      .exit().remove();
 
-      const letterEnter = letters.enter()
-        .append('g')
-        .classed('letter', true)
-        .classed('new', true)
+    const letterEnter = letters.enter()
+      .append('g')
+      .classed('letter', true)
+      .classed('new', true);
 
-      letterEnter.append('rect');
-      letterEnter.append('text');
+    letterEnter.append('rect');
+    letterEnter.append('text');
 
-      letterEnter.merge(letters)
-        .select('rect')
-          .attr('width', barWidth)
-          .attr('height', d => d.count * 20)
-          .attr('x', (d, i) => (barWidth + barPadding) * i)
-          .attr('y', (d) => 600 - (d.count * 20));
-
-      letterEnter.merge(letters)
-        .select('text')
-        .text(d => d.character)
-        .attr('fill', 'black')
-        .attr('text-anchor', 'middle')
-        .attr('x', (d, i) => (barWidth + barPadding) * i + (barWidth / 2))
+    letterEnter.merge(letters)
+      .select('rect')
+        .attr('width', barWidth)
+        .attr('height', d => d.count * 20)
+        .attr('x', (d, i) => (barWidth + barPadding) * i)
         .attr('y', (d) => 600 - (d.count * 20));
 
+    letterEnter.merge(letters)
+      .select('text')
+      .text(d => d.character)
+      .attr('fill', 'black')
+      .attr('text-anchor', 'middle')
+      .attr('x', (d, i) => (barWidth + barPadding) * i + (barWidth / 2))
+      .attr('y', (d) => 600 - (d.count * 20));
+
     d3.select('#phrase')
-      .text(`Analysis of: "${phrase}"`)
+      .text(`Analysis of: "${phrase}"`);
 
     d3.select('#count')
       .text(`(New characters: ${letters.enter().nodes().length})`);

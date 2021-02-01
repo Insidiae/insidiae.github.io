@@ -1,11 +1,11 @@
 //* Get data from the CSV data files
 async function getData() {
   try {
-    const co2Request = d3.csv("/data/co2/API_EN.ATM.CO2E.KT_DS2_en_csv_v2.csv", formatter);
-    const methaneRequest = d3.csv("/data/methane/API_EN.ATM.METH.KT.CE_DS2_en_csv_v2.csv", formatter);
-    const renewableRequest = d3.csv("/data/renewable/API_EG.FEC.RNEW.ZS_DS2_en_csv_v2.csv", formatter);
-    const populationRequest = d3.csv("/data/population/API_SP.POP.TOTL_DS2_en_csv_v2.csv", formatter);
-    const urbanRequest = d3.csv("/data/urban_population/API_SP.URB.TOTL_DS2_en_csv_v2.csv", formatter);
+    const co2Request = d3.csv("data/co2/API_EN.ATM.CO2E.KT_DS2_en_csv_v2.csv", formatter);
+    const methaneRequest = d3.csv("data/methane/API_EN.ATM.METH.KT.CE_DS2_en_csv_v2.csv", formatter);
+    const renewableRequest = d3.csv("data/renewable/API_EG.FEC.RNEW.ZS_DS2_en_csv_v2.csv", formatter);
+    const populationRequest = d3.csv("data/population/API_SP.POP.TOTL_DS2_en_csv_v2.csv", formatter);
+    const urbanRequest = d3.csv("data/urban_population/API_SP.URB.TOTL_DS2_en_csv_v2.csv", formatter);
 
     const data = await Promise.all([co2Request, methaneRequest, renewableRequest, populationRequest, urbanRequest]);
 

@@ -1,17 +1,90 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-* {
+/* Modern CSS Reset by Josh W Comeau */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Google Fonts Icons */
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+/* Drum Machine Styles */
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(to right top, #0241ca, #588dfd, #dce7ff);
 }
 
 main {
@@ -19,9 +92,11 @@ main {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 40%;
-  height: 40%;
-  border: 2px solid red;
+  background-color: #f0f5ff;
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  border-radius: 0.75rem;
 }
 
 section {
@@ -31,12 +106,33 @@ section {
 
 #drum-keys {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  justify-items: center;
+  align-content: center;
+  gap: 15px;
 }
 
+.drum-pad {
+  width: 100px;
+  height: 100px;
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  transition: all 0.07s ease;
+  color: #f0f5ff;
+  background: #588dfd;
+  text-shadow: 0 0 0.5rem #011542;
+}
+
+.drum-pad:active,
 .active {
-  background-color: red;
+  transform: scale(1.1);
+  border-color: #bdd2fe;
+  box-shadow: 0 0 1rem #bdd2fe;
+}
+
+kbd {
+  font-size: 24px;
 }
 
 #drum-controls {
@@ -47,7 +143,116 @@ section {
 }
 
 #display {
-  background-color: gray;
-  height: 2.5em;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  width: 175px;
+  height: 50px;
+  background-color: #1760fc;
+  color: #f0f5ff;
+  font-size: 18px;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Toggle Switch styles from https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: #bdd2fe;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: #f0f5ff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #588dfd;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #588dfd;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    width: 80vw;
+  }
+
+  .drum-pad {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    height: 60vh;
+    flex-direction: column;
+  }
+
+  #drum-keys {
+    order: 1;
+    gap: 7px;
+  }
+
+  .drum-pad {
+    width: 60px;
+    height: 60px;
+  }
+
+  kbd {
+    font-size: 18px;
+  }
 }

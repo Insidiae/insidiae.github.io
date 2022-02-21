@@ -116,7 +116,7 @@ const banks = {
 function App() {
   const [currentBankKey, setCurrentBankKey] = React.useState("bankOne");
   const [volume, setVolume] = React.useState(1);
-  const [displayText, setDisplayText] = React.useState("");
+  const [displayText, setDisplayText] = React.useState("Heater Kit");
 
   const currentBank = banks[currentBankKey];
 
@@ -127,8 +127,8 @@ function App() {
     audio.play();
   }
 
-  function changeBank() {
-    if (currentBankKey === "bankOne") {
+  function changeBank(event) {
+    if (event.currentTarget.checked) {
       setCurrentBankKey("bankTwo");
       setDisplayText("Smooth Piano Kit");
     } else {
@@ -180,7 +180,7 @@ function App() {
               className="drum-pad"
               onClick={() => playDrum(drumPad)}
             >
-              {drumPad.keyTrigger}
+              <kbd>{drumPad.keyTrigger}</kbd>
               <audio
                 id={drumPad.keyTrigger}
                 src={drumPad.url}
@@ -192,15 +192,21 @@ function App() {
       </section>
       <section id="drum-controls">
         <div id="display">{displayText}</div>
-        <input
-          type="range"
-          min={0}
-          max={1}
-          step={0.01}
-          onChange={(event) => setVolume(event.currentTarget.value)}
-          value={volume}
-        />
-        <button onClick={changeBank}>Change Bank</button>
+        <label className="volume">
+          <span className="material-icons-outlined">volume_up</span>
+          <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.01}
+            onChange={(event) => setVolume(event.currentTarget.value)}
+            value={volume}
+          />
+        </label>
+        <label className="switch">
+          <input type="checkbox" onClick={(event) => changeBank(event)} />
+          <span className="slider"></span>
+        </label>
       </section>
     </main>
   );

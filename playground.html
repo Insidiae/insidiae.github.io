@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        place-content: center;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      .u-margin-top--sm {
+        margin-top: 16px;
+      }
+
+      .u-text-align--center {
+        text-align: center;
+      }
+
+      .card {
+        width: 300px;
+        border-radius: 8px;
+        /* box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.075); */
+        box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.1);
+      }
+
+      .card__details {
+        padding: 16px 24px;
+      }
+
+      .card__img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .card__title {
+        margin-bottom: 16px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 9999px;
+        background-color: var(--tag-background-color, hsl(0deg 0% 83%));
+        color: var(--tag-color, hsl(0deg 0% 100%));
+        font-size: 0.75rem;
+        font-weight: var(--font-weight-semibold);
+        text-transform: uppercase;
+      }
+
+      .btn,
+      .btn:link,
+      .btn:visited {
+        display: inline-block;
+        width: fit-content;
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: hsl(0deg 0% 100%);
+        background-color: hsl(221deg 98% 67%);
+        text-decoration: none;
+      }
+    </style>
+
+    <title>Cards!</title>
+  </head>
+  <body>
+    <article class="card">
+      <div class="card__img-box">
+        <img
+          src="https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg"
+          alt=""
+          class="card__img"
+        />
+      </div>
+      <div class="card__details">
+        <h3 class="card__title">Project Title</h3>
+        <div class="card__tags">
+          <span class="tag">Legacy</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+        </div>
+        <p class="card__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus qui
+          alias fugiat, tenetur iste delectus enim porro amet, consequatur ut
+          quae. Laboriosam, nisi adipisci! Soluta eius libero aspernatur minus
+          veritatis?
+        </p>
+        <div class="u-text-align--center">
+          <a href="#" class="btn u-margin-top--sm">View Project</a>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

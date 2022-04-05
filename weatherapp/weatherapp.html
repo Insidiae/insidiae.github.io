@@ -1,103 +1,163 @@
 <!DOCTYPE html>
-<html lang=en>
-
-<head>
-    <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <title>Weather App</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-default" id="nav_bar">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="weatherapp.html" class="navbar-brand navbar-link myWhiteText" id="brand">
-                    <img src="../images/weather_logo.png" alt="" class="img-responsive" id="logo"><strong>Weather App</strong>
-                </a>
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navcol">
-                <ul class="nav navbar-nav navbar-right" id="nav_list">
-                    <li><a href="current.html">Current</a></li>
-                    <li><a href="forecast.html">Forecast</a></li>
-                    <li><a href="../index.html">Main Page</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <a
+            href="weatherapp.html"
+            class="navbar-brand navbar-link myWhiteText"
+            id="brand"
+          >
+            <img
+              src="./images/weather_logo.png"
+              alt=""
+              class="img-responsive"
+              id="logo"
+            /><strong>Weather App</strong>
+          </a>
+          <button
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navcol"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
+
+        <div class="collapse navbar-collapse" id="navcol">
+          <ul class="nav navbar-nav navbar-right" id="nav_list">
+            <li><a href="current.html">Current</a></li>
+            <li><a href="forecast.html">Forecast</a></li>
+            <li><a href="../index.html">Main Page</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="container" id="mainApp">
-        <div class="row" id="mainIntro">
-            <div class="col-md-12" id="mainText">
-                <h2 class="text-center myWhiteText" id="text1">A simple Weather App built as part of FreeCodeCamp's Intermediate Front End Development Projects.</h2>
-                <h3 class="text-center myWhiteText" id="text2">Get the local weather in your current location, or in any city.</h3>
-            </div>
+      <div class="row" id="mainIntro">
+        <div class="col-md-12" id="mainText">
+          <h2 class="text-center myWhiteText" id="text1">
+            A simple Weather App built as part of FreeCodeCamp's Intermediate
+            Front End Development Projects.
+          </h2>
+          <h3 class="text-center myWhiteText" id="text2">
+            Get the local weather in your current location, or in any city.
+          </h3>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 40px">
+        <div class="col-md-12">
+          <h2 class="text-center text-primary">
+            <span id="welcomeHeader"></span>
+          </h2>
+          <p class="text-center" id="welcomeText">
+            This weather app is a web-based application that shows the current
+            weather information and 5-day weather forecasts in your current
+            location, or in any city you search. This weather app uses the
+            <a href="http://ip-api.com/docs/api:json">IP-API</a> to get your
+            current location based on your IP address, and the
+            <a href="http://openweathermap.org/current#geo">OpenWeatherMap</a>
+            API to get weather information.
+          </p>
+        </div>
+      </div>
+
+      <div class="row" style="margin: auto; width: 100%">
+        <div class="col-md-4" id="myDesc">
+          <div class="text-center info-icon"><i class="fa fa-globe"></i></div>
+          <h3 class="text-center">Use your current location</h3>
+          <p class="text-center">
+            IP-API determines your current location from your IP address, so you
+            can instantly search for local weather information wherever you are.
+          </p>
         </div>
 
-        <div class="row" style="margin-top:40px;">
-            <div class="col-md-12">
-                <h2 class="text-center text-primary"><span id="welcomeHeader"></span></h2>
-                <p class="text-center" id="welcomeText">This weather app is a web-based application that shows the current weather information and 5-day weather forecasts in your current location, or in any city you search. This weather app uses the <a href="http://ip-api.com/docs/api:json">IP-API</a> to get your current location based on your IP address, and the <a href="http://openweathermap.org/current#geo">OpenWeatherMap</a> API to get weather information.</p>
-            </div>
+        <div class="col-md-4" id="myDesc">
+          <div class="text-center info-icon"><i class="fa fa-sun-o"></i></div>
+          <h3 class="text-center">OpenWeatherMap API</h3>
+          <p class="text-center">
+            OpenWeatherMap provides current weather information and weather
+            forecasts for any city.
+          </p>
         </div>
 
-        <div class="row" style="margin:auto;width:100%">
-            <div class="col-md-4" id="myDesc">
-                <div class="text-center info-icon"><i class="fa fa-globe"></i></div>
-                <h3 class="text-center">Use your current location</h3>
-                <p class="text-center">IP-API determines your current location from your IP address, so you can instantly search for local weather information wherever you are.</p>
-            </div>
-
-            <div class="col-md-4" id="myDesc">
-                <div class="text-center info-icon"><i class="fa fa-sun-o"></i></div>
-                <h3 class="text-center">OpenWeatherMap API</h3>
-                <p class="text-center">OpenWeatherMap provides current weather information and weather forecasts for any city.</p>
-            </div>
-
-            <div class="col-md-4" id="myDesc">
-                <div class="text-center info-icon"><i class="fa fa-cloud"></i></div>
-                <h3 class="text-center">View results</h3>
-                <p class="text-center">By using your current location or searching for any city, this weather app provides weather data such as temperature, pressure, humidity, and wind speed.</p>
-            </div>
+        <div class="col-md-4" id="myDesc">
+          <div class="text-center info-icon"><i class="fa fa-cloud"></i></div>
+          <h3 class="text-center">View results</h3>
+          <p class="text-center">
+            By using your current location or searching for any city, this
+            weather app provides weather data such as temperature, pressure,
+            humidity, and wind speed.
+          </p>
         </div>
+      </div>
     </div>
 
     <div class="footer myWhiteText">
-        <div class="container">
-            <div class="row text-center" style="padding-top:5px;">
-                <p>Made by <a href="https://www.freecodecamp.org/insidiae">Kobe Ruado</a> using the <a href="http://ip-api.com/docs/api:json">IP-API</a> and <a href="http://openweathermap.org/current#geo">OpenWeatherMap</a> APIs, and using <a href="https://www.udemy.com/build-a-weather-app-with-ajax-using-open-weather-map-api/">this online course</a> as reference.</p>
-            </div>
+      <div class="container">
+        <div class="row text-center" style="padding-top: 5px">
+          <p>
+            Made by
+            <a href="https://www.freecodecamp.org/insidiae">Kobe Ruado</a> using
+            the <a href="http://ip-api.com/docs/api:json">IP-API</a> and
+            <a href="http://openweathermap.org/current#geo">OpenWeatherMap</a>
+            APIs, and using
+            <a
+              href="https://www.udemy.com/build-a-weather-app-with-ajax-using-open-weather-map-api/"
+              >this online course</a
+            >
+            as reference.
+          </p>
         </div>
+      </div>
     </div>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="typed.js"></script>
     <script>
-        $(document).ready(function() {
-            $("#welcomeHeader").typed({
-                strings: ["Welcome to the Weather App!"],
-                typeSpeed: 35,
-                onStringTyped: function() {
-                    return $("#welcomeHeader").siblings('.typed-cursor').remove();
-                }
-            })
+      $(document).ready(function () {
+        $("#welcomeHeader").typed({
+          strings: ["Welcome to the Weather App!"],
+          typeSpeed: 35,
+          onStringTyped: function () {
+            return $("#welcomeHeader").siblings(".typed-cursor").remove();
+          },
         });
-
+      });
     </script>
-</body>
-
+  </body>
 </html>

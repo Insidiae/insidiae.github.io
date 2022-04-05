@@ -1,83 +1,129 @@
 <!DOCTYPE html>
-<html lang=en>
-
-<head>
-    <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <title>Weather Report</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-default" id="nav_bar">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="weatherapp.html" class="navbar-brand navbar-link myWhiteText" id="brand">
-                    <img src="../images/weather_logo.png" alt="" class="img-responsive" id="logo"><strong>Weather App</strong>
-                </a>
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navcol">
-                <ul class="nav navbar-nav navbar-right" id="nav_list">
-                    <li><a href="current.html">Current</a></li>
-                    <li><a href="forecast.html">Forecast</a></li>
-                    <li><a href="../index.html">Main Page</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <a
+            href="weatherapp.html"
+            class="navbar-brand navbar-link myWhiteText"
+            id="brand"
+          >
+            <img
+              src="./images/weather_logo.png"
+              alt=""
+              class="img-responsive"
+              id="logo"
+            /><strong>Weather App</strong>
+          </a>
+          <button
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navcol"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
+
+        <div class="collapse navbar-collapse" id="navcol">
+          <ul class="nav navbar-nav navbar-right" id="nav_list">
+            <li><a href="current.html">Current</a></li>
+            <li><a href="forecast.html">Forecast</a></li>
+            <li><a href="../index.html">Main Page</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-
     <div class="container" id="currentMain">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center myWhiteText" style="font-weight: 600;">Get Current Weather Information</h2>
-                <h3 class="text-center myWhiteText">Use your own location, or search for another city</h3>
-                <span id="error" class='text-center'></span>
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center myWhiteText" style="font-weight: 600">
+            Get Current Weather Information
+          </h2>
+          <h3 class="text-center myWhiteText">
+            Use your own location, or search for another city
+          </h3>
+          <span id="error" class="text-center"></span>
         </div>
+      </div>
 
-        <div class="row" id="cityDiv">
-            <div class="col-md-12">
-                <div class="input-group" style="margin-top:10px;">
-                    <span class="input-group-btn">
-                            <button class="btn btn-primary" id="useCurrent">Use Current Location</button>
-                        </span>
-                    <input type="text" name="city" id="cityInput" class="form-control" placeholder="Enter City Name">
-                    <span class="input-group-btn">
-                            <button class="btn btn-secondary" id="searchCity">Search City</button>
-                            <button class="btn btn-info" id="toggleUnit">Units: <span id="currentUnit">Metric</span></button>
-                    </span>
-                </div>
-            </div>
+      <div class="row" id="cityDiv">
+        <div class="col-md-12">
+          <div class="input-group" style="margin-top: 10px">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" id="useCurrent">
+                Use Current Location
+              </button>
+            </span>
+            <input
+              type="text"
+              name="city"
+              id="cityInput"
+              class="form-control"
+              placeholder="Enter City Name"
+            />
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" id="searchCity">
+                Search City
+              </button>
+              <button class="btn btn-info" id="toggleUnit">
+                Units: <span id="currentUnit">Metric</span>
+              </button>
+            </span>
+          </div>
         </div>
+      </div>
 
-        <div id="results"></div>
+      <div id="results"></div>
     </div>
 
     <div class="footer myWhiteText">
-        <div class="container">
-            <div class="row text-center" style="padding-top:5px;">
-                <p>Made by <a href="https://www.freecodecamp.org/insidiae">Kobe Ruado</a> using the <a href="http://ip-api.com/docs/api:json">IP-API</a> and <a href="http://openweathermap.org/current#geo">OpenWeatherMap</a> APIs, and using <a href="https://www.udemy.com/build-a-weather-app-with-ajax-using-open-weather-map-api/">this online course</a> as reference.</p>
-            </div>
+      <div class="container">
+        <div class="row text-center" style="padding-top: 5px">
+          <p>
+            Made by
+            <a href="https://www.freecodecamp.org/insidiae">Kobe Ruado</a> using
+            the <a href="http://ip-api.com/docs/api:json">IP-API</a> and
+            <a href="http://openweathermap.org/current#geo">OpenWeatherMap</a>
+            APIs, and using
+            <a
+              href="https://www.udemy.com/build-a-weather-app-with-ajax-using-open-weather-map-api/"
+              >this online course</a
+            >
+            as reference.
+          </p>
         </div>
+      </div>
     </div>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="current.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,152 +1,299 @@
-:root {
-  --color-primary: #588dfd;
-  --project-tile-size: 250px;
-  --social-link-size: 100px;
+/* 
+ * Josh W. Comeau's Custom CSS Reset
+ ? https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-
-.navbar {
-  background-color: var(--color-primary);
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
 }
-
-.welcome {
-  height: 100vh;
-  position: relative;
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
 }
-
-.welcome__text {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-.welcome__title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.welcome__message {
-  font-size: 1.5rem;
-}
-
-.section__divider {
-  background-color: var(--color-primary);
-  color: #ecf0f1;
-  font-size: 2.5rem;
-  line-height: 50px;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section__desc {
-  text-align: center;
-  margin: 20px auto;
-  font-size: 2rem;
-}
-
-.projects__grid {
-  width: 90vw;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, var(--project-tile-size));
-  grid-auto-rows: 1fr;
-  grid-gap: 20px;
-  justify-content: center;
-}
-
-.projects__grid__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.projects__grid__item__thumbnail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--project-tile-size);
-  height: var(--project-tile-size);
-}
-
-.projects__grid__item__thumbnail img {
-  max-width: 100%;
-  max-height: 100%;
-  background-size: contain;
-}
-
-.projects__grid__item__title {
-  margin: 10px 0;
-  width: 100%;
-  height: 1fr;
-  text-align: center;
-  font-size: 1.25rem;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.projects__grid__item__link {
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
-  width: 50%;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0 auto;
-  left: 50%;
-  background-color: var(--color-primary);
-  color: #ecf0f1;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+body,
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 
+*=========================*
+*     GENERAL STYLES      *
+*=========================*
+*/
+
+body {
+  overflow-x: hidden;
+}
+
+/* 
+  * Hide content for sighted users while still allowing
+  * assistive technologies to discover and interact
+  * with the content
+  ? https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+*/
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* 
+*=========================*
+*       TYPOGRAPHY        *
+*=========================*
+*/
+
+@font-face {
+  font-family: "Recursive";
+  font-style: oblique 0deg 15deg;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(/portfolio-assets/fonts/Recursive-optimized.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: "Recursive", sans-serif;
+}
+
+/* 
+*=========================*
+*     CONTENT STYLES      *
+*=========================*
+*/
+
+/* HEADER */
+/* 
+  * Credits: Kevin Powell's Responsive navbar tutorial using HTML CSS & JS
+  ? https://www.youtube.com/watch?v=HbBMp6yUXO
+*/
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.profile {
+  margin: 32px;
+}
+
+.profile__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
   text-decoration: none;
-  transition: background 0.2s;
 }
 
-.projects__grid__item__link:hover {
-  background-color: #7fa7fd;
-  color: #ecf0f1;
-  text-decoration: none;
-}
-
-.projects__grid__item__link:active {
-  background-color: #3171fb;
-}
-
-.contact__grid {
-  width: 90vw;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, var(--social-link-size));
-  grid-auto-rows: 1fr;
-  grid-gap: 20px;
-  justify-content: center;
-}
-.contact__grid__item {
-  font-size: 3rem;
-  height: var(--social-link-size);
+.profile__picture {
+  border: 2px solid white;
   border-radius: 50%;
-  text-align: center;
-  border: 2px solid var(--color-primary);
-  transition: all 0.2s;
+  width: 50px;
+  aspect-ratio: 1 / 1;
 }
 
-.contact__grid__item:hover {
-  background-color: var(--color-primary);
+.profile__name {
+  display: none;
 }
 
-.bi {
-  color: var(--color-primary);
+.header__nav-toggle {
+  display: none;
 }
 
-.contact__grid__item svg {
-  height: 50%;
-  width: 50%;
-  fill: var(--color-primary);
+.header__nav {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: hsl(0deg 0% 0% / 0.75);
 }
 
-.contact__grid__item:hover .bi {
-  color: #d7e3ff;
+.header__nav__link {
+  color: white;
 }
 
-.contact__grid__item:hover svg {
-  fill: #d7e3ff;
+@supports (backdrop-filter: blur(16px)) {
+  .header__nav {
+    background-color: hsl(0deg 0% 100% / 0.1);
+    backdrop-filter: blur(16px);
+  }
+}
+
+.header__nav__link {
+  text-decoration: none;
+}
+
+.header__nav__link span {
+  font-weight: 700;
+  margin-inline-end: 0.75em;
+}
+
+.filler {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.filler:nth-of-type(1) {
+  background-color: tomato;
+}
+.filler:nth-of-type(2) {
+  background-color: olivedrab;
+}
+.filler:nth-of-type(3) {
+  background-color: cornflowerblue;
+}
+
+/* 
+*=========================*
+*    RESPONSIVE STYLES    *
+*=========================*
+*/
+
+/* MOBILE AND BELOW: <560px */
+/*
+ ? We use some max-width media queries for the header nav
+ ? so we don't have to overwrite a bunch of styles later
+*/
+@media (max-width: 34.999em) {
+  .header__nav {
+    position: fixed;
+    /* Fancy modern syntax for top/right/bottom/left */
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    gap: 32px;
+    padding: min(320px, 15vh) 32px;
+    will-change: transform;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in;
+
+    z-index: 2;
+  }
+
+  .header__nav[data-visible="true"] {
+    transform: translateX(0%);
+    transition: transform 400ms ease-out;
+  }
+
+  .header__nav-toggle {
+    display: block;
+    position: fixed;
+    width: 32px;
+    aspect-ratio: 1 / 1;
+    top: 32px;
+    right: 32px;
+    border: none;
+    background: transparent;
+    background-image: url(portfolio-assets/img/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* 
+      ! This is a special case indicating that this element
+      ! should stay on top of everything else at all times.
+      * Consider creating separate stacking contexts
+      * for other content that need to overlap:
+      ? https://www.joshwcomeau.com/css/stacking-contexts/#airtight-abstractions-with-isolation
+    */
+    z-index: 9999;
+  }
+
+  .header__nav-toggle[aria-expanded="true"] {
+    background-image: url(portfolio-assets/img/icon-close.svg);
+  }
+}
+
+/* TABLET ONLY: 560px-879px */
+/* 
+  ? Hide the index numbers on tablet devices
+*/
+@media (min-width: 35em) and (max-width: 54.999em) {
+  .header__nav__link span {
+    display: none;
+  }
+}
+
+/* MOBILE AND UP: >=560px */
+@media (min-width: 35em) {
+  .header__nav {
+    gap: clamp(24px, 5vw, 48px);
+    padding: 32px clamp(48px, 7vw, 160px);
+  }
+}
+
+/* TABLET AND UP: >=880px */
+@media (min-width: 55em) {
+  .profile__name {
+    display: revert;
+  }
 }

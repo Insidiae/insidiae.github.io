@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro|Ubuntu"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>KB Ruado (@Insidiae)</title>
+  </head>
+
+  <body>
+    <!-- TODO: GIVE THIS PAGE THE REVAMP IT DESERVES -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://github.com/Insidiae/">
+          <img
+            src="https://avatars.githubusercontent.com/u/28495550"
+            alt="Profile Picture"
+            width="50"
+            height="50"
+            class="rounded-circle"
+          />
+          KB Ruado (@insidiae)
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- TODO: Boostrapify main section -->
+    <main class="container-fluid px-0">
+      <section class="welcome" id="welcome-section">
+        <div class="welcome__text">
+          <h1 class="welcome__title">Hello there.</h1>
+          <p class="welcome__message">
+            This is a work-in-progress page, but feel free to check out my
+            projects down below
+          </p>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h1 class="section__divider">Projects</h1>
+        <h2 class="section__desc">Featured Projects</h2>
+        <!-- TODO: Add thumbnails for projects -->
+        <div class="projects__grid">
+          <!-- freeCodeCamp Drum Machine Project -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="https://place-hold.it/250x250"
+                alt="Placeholder Image"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">Drum Machine</h3>
+            <a
+              class="projects__grid__item__link"
+              href="drum/drum.html"
+              target="_blank"
+            >
+              View More
+            </a>
+          </div>
+
+          <!-- freeCodeCamp Markdown Previewer Project -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="https://place-hold.it/250x250"
+                alt="Placeholder Image"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">Markdown Previewer</h3>
+            <a
+              class="projects__grid__item__link"
+              href="markdown/markdown.html"
+              target="_blank"
+            >
+              View More
+            </a>
+          </div>
+
+          <!-- WebDev Bootcamp Projects -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="https://img-b.udemycdn.com/course/240x135/625204_436a_3.jpg"
+                alt="Placeholder Image"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">
+              <a
+                class="section__desc__link"
+                href="https://www.udemy.com/the-web-developer-bootcamp/"
+              >
+                The Web Developer Bootcamp
+              </a>
+              Projects
+            </h3>
+            <a
+              class="projects__grid__item__link"
+              href="wdbc-proj/index.html"
+              target="_blank"
+            >
+              View More
+            </a>
+          </div>
+
+          <!-- Advanced CSS and Sass Projects -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg"
+                alt="Placeholder Image"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">
+              <a
+                href="https://www.udemy.com/advanced-css-and-sass"
+                target="_blank"
+                >Advanced CSS and Sass</a
+              >
+              Projects
+            </h3>
+            <a
+              class="projects__grid__item__link"
+              href="advanced-css-and-sass/index.html"
+              target="_blank"
+            >
+              View More
+            </a>
+          </div>
+
+          <!-- freeCodeCamp Product Landing Page Project -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="landing/assets/img/turret-box.png"
+                alt="Aperture Sentry Turret"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">Product Landing Page</h3>
+            <a
+              class="projects__grid__item__link"
+              href="landing/landing.html"
+              target="_blank"
+            >
+              View Project
+            </a>
+          </div>
+
+          <!-- freeCodeCamp Simon® Game Project -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="https://place-hold.it/250x250"
+                alt="Placeholder Image"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">Simon&reg; Game</h3>
+            <a
+              class="projects__grid__item__link"
+              href="simon/simon.html"
+              target="_blank"
+            >
+              View Project
+            </a>
+          </div>
+
+          <!-- freeCodeCamp Tic-Tac-Toe Project -->
+          <div class="project-tile projects__grid__item">
+            <div class="projects__grid__item__thumbnail">
+              <img
+                src="https://place-hold.it/250x250"
+                alt="Placeholder Image"
+              />
+            </div>
+            <h3 class="projects__grid__item__title">Tic Tac Toe</h3>
+            <a
+              class="projects__grid__item__link"
+              href="tictactoe/tictactoe.html"
+              target="_blank"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+
+        <h2 class="section__desc">
+          <a href="projects.html"> View All Projects &rarr; </a>
+        </h2>
+      </section>
+
+      <section class="contact" id="contact">
+        <h1 class="section__divider">Contact</h1>
+        <h2 class="section__desc">My Social Media Links</h2>
+        <div class="contact__grid">
+          <a
+            href="mailto:insidiae423@gmail.com"
+            class="contact__grid__item"
+            target="_blank"
+          >
+            <i class="contact__grid__item__icon bi bi-envelope"></i>
+          </a>
+          <a
+            href="https://twitter.com/insidiae423"
+            class="contact__grid__item"
+            target="_blank"
+          >
+            <i class="contact__grid__item__icon bi bi-twitter"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/Insidiae423"
+            class="contact__grid__item"
+            target="_blank"
+          >
+            <i class="contact__grid__item__icon bi bi-facebook"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/insidiae423/"
+            class="contact__grid__item"
+            target="_blank"
+          >
+            <i class="contact__grid__item__icon bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/Insidiae/"
+            class="contact__grid__item"
+            target="_blank"
+          >
+            <i class="contact__grid__item__icon bi bi-github"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Uncomment the script below to view tests for this page -->
+    <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

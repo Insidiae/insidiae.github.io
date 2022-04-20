@@ -2,441 +2,860 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro|Ubuntu"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="nav.js" defer></script>
+
     <title>KB Ruado (@Insidiae)</title>
   </head>
-
   <body>
-    <!-- TODO: GIVE THIS PAGE THE REVAMP IT DESERVES -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://github.com/Insidiae/">
+    <header class="header">
+      <div class="profile">
+        <a class="profile__link" href="https://github.com/Insidiae/">
+          <span class="visually-hidden">Visit KB Ruado's Github Profile</span>
           <img
             src="https://avatars.githubusercontent.com/u/28495550"
-            alt="Profile Picture"
-            width="50"
-            height="50"
-            class="rounded-circle"
+            alt="KB Ruado's Github Profile Picture"
+            class="profile__picture"
           />
-          KB Ruado (@insidiae)
+          <span class="profile__name"> KB Ruado (@Insidiae) </span>
         </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggler"
-          aria-controls="navbarToggler"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarToggler">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
 
-    <!-- TODO: Boostrapify main section -->
-    <main class="container-fluid px-0">
-      <section class="projects" id="projects">
-        <h1 class="section__divider">Projects</h1>
-        <h2 class="section__desc">freeCodeCamp Projects</h2>
-        <!-- TODO: Add thumbnails for projects -->
-        <div class="projects__grid">
-          <!-- [LEGACY] freeCodeCamp Tribute Page Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">
-              SiIvaGunner Tribute Page
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="tribute/siivagunner.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
+      <button
+        class="header__nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="visually-hidden">Menu</span>
+      </button>
 
-          <!-- freeCodeCamp Survey Form Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Survey Form</h3>
-            <a
-              class="projects__grid__item__link"
-              href="survey/survey.html"
-              target="_blank"
-            >
-              View Project
+      <nav>
+        <ul id="primary-navigation" class="header__nav" data-visible="false">
+          <li>
+            <a href="#" class="header__nav__link">
+              <span aria-hidden="true">00</span> Home
             </a>
-          </div>
+          </li>
+          <li>
+            <a href="#" class="header__nav__link">
+              <span aria-hidden="true">01</span> About
+            </a>
+          </li>
+          <li>
+            <a href="#" class="header__nav__link">
+              <span aria-hidden="true">02</span> Projects
+            </a>
+          </li>
+          <li>
+            <a href="#" class="header__nav__link">
+              <span aria-hidden="true">03</span> Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-          <!-- [LEGACY] freeCodeCamp Random Quote Generator Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">
-              Jojo's Bizzare Random Quote Generator
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="quotegen/quotegen.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- [LEGACY] freeCodeCamp Weather App Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Weather App</h3>
-            <a
-              class="projects__grid__item__link"
-              href="weatherapp/weatherapp.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Product Landing Page Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="landing/assets/img/turret-box.png"
-                alt="Aperture Sentry Turret"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Product Landing Page</h3>
-            <a
-              class="projects__grid__item__link"
-              href="landing/landing.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- [LEGACY] freeCodeCamp Wikipedia Viewer Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Wikipedia Viewer</h3>
-            <a
-              class="projects__grid__item__link"
-              href="wikiviewer/wikiviewer.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- [LEGACY] freeCodeCamp Twitch Viewer Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Twitch Viewer</h3>
-            <a
-              class="projects__grid__item__link"
-              href="twitchviewer/twitchviewer.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- [LEGACY?] freeCodeCamp JavaScript Calculator Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">JavaScript Calculator</h3>
-            <a
-              class="projects__grid__item__link"
-              href="jscalc/jscalc.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Pomodoro Clock Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Pomodoro Clock</h3>
-            <a
-              class="projects__grid__item__link"
-              href="pomodoro/pomodoro.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Tic Tac Toe Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Tic Tac Toe</h3>
-            <a
-              class="projects__grid__item__link"
-              href="tictactoe/tictactoe.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Simon® Game Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Simon&reg; Game</h3>
-            <a
-              class="projects__grid__item__link"
-              href="simon/simon.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Markdown Previewer Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Markdown Previewer</h3>
-            <a
-              class="projects__grid__item__link"
-              href="markdown/markdown.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
-
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Drum Machine</h3>
-            <a
-              class="projects__grid__item__link"
-              href="drum/drum.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
+    <main>
+      <section id="projects" class="section-projects max-width-wrapper">
+        <div class="u-center-text u-margin-bottom--md">
+          <h1 class="heading-secondary">freeCodeCamp Projects</h1>
         </div>
 
-        <h2 class="section__desc">
-          <a
-            class="section__desc__link"
-            href="https://www.udemy.com/the-web-developer-bootcamp/"
-          >
-            The Web Developer Bootcamp
-          </a>
-        </h2>
-        <div class="projects__grid">
-          <!-- [LEGACY] WebDev Bootcamp Exercises -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
+        <div class="projects card-list">
+          <article class="card">
+            <div class="card__img-box">
               <img
-                src="https://img-b.udemycdn.com/course/240x135/625204_436a_3.jpg"
-                alt="Placeholder Image"
+                src="portfolio-assets/img/tribute.jpg"
+                alt="SiIvaGunner Christmas Comeback Crisis Logo"
+                class="card__img"
               />
             </div>
-            <h3 class="projects__grid__item__title">Course Exercises</h3>
-            <a
-              class="projects__grid__item__link"
-              href="wdbc/index.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
+            <div class="card__details">
+              <h3 class="card__title">SiIvaGunner Tribute Page</h3>
+              <div class="card__tags">
+                <span class="tag">Legacy</span>
+                <span class="tag">HTML</span>
+                <span class="tag">Bootstrap</span>
+              </div>
+              <p class="card__description">
+                My first ever freeCodeCamp project! I turned
+                <a
+                  href="https://www.youtube.com/watch?v=RPXZq_jc4xY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >the SiIvaGunner Timeline</a
+                >
+                into an HTML page using some Bootstrap classes.
+              </p>
+              <div class="card__link">
+                <a
+                  href="tribute/siivagunner.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
 
-          <!-- WebDev Bootcamp Projects -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
+          <article class="card">
+            <div class="card__img-box">
               <img
-                src="https://img-a.udemycdn.com/course/240x135/1218586_9f86.jpg"
-                alt="Placeholder Image"
+                src="portfolio-assets/img/quotegen.png"
+                alt="Screenshot of the Random Quote Generator project"
+                class="card__img"
               />
             </div>
-            <h3 class="projects__grid__item__title">Course Projects</h3>
-            <a
-              class="projects__grid__item__link"
-              href="wdbc-proj/index.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
+            <div class="card__details">
+              <h3 class="card__title">Jojo's Bizzare Random Quote Generator</h3>
+              <div class="card__tags">
+                <span class="tag">Legacy</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+              <p class="card__description">
+                One of my first JS projects, I made a random quote generator
+                that displays a random background matching the currently
+                displayed quote.
+              </p>
+              <div class="card__link">
+                <a
+                  href="quotegen/quotegen.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/weatherapp.png"
+                alt="Screenshot of the Weather App project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Weather App</h3>
+              <div class="card__tags">
+                <span class="tag">Legacy</span>
+                <span class="tag">JS</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">APIs/AJAX</span>
+              </div>
+              <p class="card__description">
+                This proect uses a legacy OpenWeatherMap API to display the
+                current weather as well as a 5-day weather forecast on the
+                user's current location (or any other city they search for).
+              </p>
+              <div class="card__link">
+                <a
+                  href="weatherapp/weatherapp.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/wikiviewer.png"
+                alt="Screenshot of the Wikipedia Viewer project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Wikipedia Viewer</h3>
+              <div class="card__tags">
+                <span class="tag">Legacy</span>
+                <span class="tag">JS</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">APIs/AJAX</span>
+              </div>
+              <p class="card__description">
+                This project uses the Wikipedia search API to display search
+                results based on user input.
+              </p>
+              <div class="card__link">
+                <a
+                  href="wikiviewer/wikiviewer.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/twitchviewer.png"
+                alt="Screenshot of the Twitch Viewer project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Twitch Viewer</h3>
+              <div class="card__tags">
+                <span class="tag">Legacy</span>
+                <span class="tag">JS</span>
+                <span class="tag">jQuery</span>
+                <span class="tag">APIs/AJAX</span>
+              </div>
+              <p class="card__description">
+                This project uses a legacy Twitch API to display some
+                information on some pre-selected Twitch channels.
+              </p>
+              <div class="card__link">
+                <a
+                  href="twitchviewer/twitchviewer.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/survey.png"
+                alt="Screenshot of the freeCodeCamp Survey Form project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Survey Form</h3>
+              <div class="card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <p class="card__description">
+                One of the newer Responsive Web Design projects from
+                freeCodeCamp, a simple survey form demonstrating different types
+                of form input fields.
+              </p>
+              <div class="card__link">
+                <a
+                  href="survey/survey.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="landing/assets/img/turret-colors.jpg"
+                alt="A selection of Aperture Science Turrets"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Product Landing Page</h3>
+              <div class="card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Sass</span>
+              </div>
+              <p class="card__description">
+                This project uses intermediate CSS + Sass workflows to create a
+                responsive Product Landing Page for the Aperture Science Turret
+                from the Portal video game series.
+              </p>
+              <div class="card__link">
+                <a
+                  href="landing/landing.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/jscalc.png"
+                alt="Screenshot of the JavaScript Calculator project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">JavaScript Calculator</h3>
+              <div class="card__tags">
+                <span class="tag">JS</span>
+                <span class="tag">jQuery</span>
+              </div>
+              <p class="card__description">
+                A simple calculator made with JavaScript.
+              </p>
+              <div class="card__link">
+                <a
+                  href="jscalc/jscalc.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/pomodoro.png"
+                alt="Screenshot of the Pomodoro Clock project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Pomodoro Clock</h3>
+              <div class="card__tags">
+                <span class="tag">JS</span>
+              </div>
+              <p class="card__description">
+                A simple Pomodoro Clock made with JavaScript, using the
+                JavaScript Date API to keep track of the time.
+              </p>
+              <div class="card__link">
+                <a
+                  href="pomodoro/pomodoro.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/tictactoe.png"
+                alt="Screenshot of the Tic Tac Toe project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Tic Tac Toe</h3>
+              <div class="card__tags">
+                <span class="tag">JS</span>
+              </div>
+              <p class="card__description">
+                A Tic-Tac-Toe game made with pure JavaScript, featuring an
+                unwinnable AI opponent using the Minimax algorithm.
+              </p>
+              <div class="card__link">
+                <a
+                  href="tictactoe/tictactoe.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/simon.png"
+                alt="Screenshot of the Simon Game project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Simon&reg; Game</h3>
+              <div class="card__tags">
+                <span class="tag">JS</span>
+              </div>
+              <p class="card__description">
+                A Simon&reg; Game made with pure JavaScript.
+              </p>
+              <div class="card__link">
+                <a
+                  href="simon/simon.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/markdown.png"
+                alt="Screenshot of the Markdown Previewer project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Markdown Previewer</h3>
+              <div class="card__tags">
+                <span class="tag">JS</span>
+                <span class="tag">React</span>
+              </div>
+              <p class="card__description">
+                A simple Markdown proviewer using React and Marked.
+              </p>
+              <div class="card__link">
+                <a
+                  href="markdown/markdown.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/drum.png"
+                alt="Screenshot of the Drum Machine project"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Drum Machine</h3>
+              <div class="card__tags">
+                <span class="tag">JS</span>
+                <span class="tag">React</span>
+              </div>
+              <p class="card__description">
+                A Drum Machine app built with React, with each drum pad playing
+                a corresponding audio file when clicked or a corresponding
+                keyboard key is pressed.
+              </p>
+              <div class="card__link">
+                <a
+                  href="drum/drum.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <h2 class="section__desc">Misc. Activities and Projects</h2>
-        <div class="projects__grid">
-          <!-- Advanced CSS and Sass Projects -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
+        <div class="u-center-text u-margin-top--lg u-margin-bottom--md">
+          <h1 class="heading-secondary">The Web Developer Bootcamp</h1>
+        </div>
+
+        <div class="projects card-list">
+          <article class="card">
+            <div class="card__img-box">
               <img
-                src="https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg"
-                alt="Placeholder Image"
+                src="portfolio-assets/img/wdbc-old.jpg"
+                alt="(Old) Thumbnail image from The Web Developer Bootcamp's Udemy page"
+                class="card__img"
               />
             </div>
-            <h3 class="projects__grid__item__title">
-              <a
-                href="https://www.udemy.com/advanced-css-and-sass"
-                target="_blank"
-                >Advanced CSS and Sass</a
-              >
-              Projects
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="advanced-css-and-sass/index.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
+            <div class="card__details">
+              <h3 class="card__title">Course Exercises</h3>
+              <div class="card__tags">
+                <span class="tag">Legacy</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+              </div>
+              <p class="card__description">
+                Course exercises from the old version of
+                <a
+                  href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Web Developer Bootcamp</a
+                >
+                Udemy course. Also features exercises from
+                <a
+                  href="https://www.udemy.com/course/the-advanced-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Advanced Web Developer Bootcamp</a
+                >
+                course.
+              </p>
+              <div class="card__link">
+                <a
+                  href="wdbc/index.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Exercises
+                </a>
+              </div>
+            </div>
+          </article>
 
-          <!-- TODO: #JavaScript30 Challenges -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
+          <article class="card">
+            <div class="card__img-box">
               <img
-                src="https://javascript30.com/images/JS3-social-share.png"
-                alt="Placeholder Image"
+                src="portfolio-assets/img/advanced-wdbc.jpg"
+                alt="Thumbnail image from The Advanced Web Developer Bootcamp's Udemy page"
+                class="card__img"
               />
             </div>
-            <h3 class="projects__grid__item__title">
-              <a href="https://javascript30.com/" target="_blank"
-                >#JavaScript30</a
-              >
-              challenge
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="js30/index.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
+            <div class="card__details">
+              <h3 class="card__title">Course Projects</h3>
+              <div class="card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JS</span>
+                <span class="tag">D3</span>
+              </div>
+              <p class="card__description">
+                Course projects from
+                <a
+                  href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Web Developer Bootcamp</a
+                >
+                and
+                <a
+                  href="https://www.udemy.com/course/the-advanced-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Advanced Web Developer Bootcamp</a
+                >.
+              </p>
+              <div class="card__link">
+                <a
+                  href="wdbc-proj/index.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </article>
 
-          <!-- CSS Grid Exercises #griddyup -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/wdbc.jpg"
+                alt="(New) Thumbnail image from The Advanced Web Developer Bootcamp's Udemy page"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Final Project: YelpCamp (MERN Remake)</h3>
+              <div class="card__tags">
+                <span class="tag">MongoDB</span>
+                <span class="tag">Express</span>
+                <span class="tag">React</span>
+                <span class="tag">Node</span>
+              </div>
+              <p class="card__description">
+                With the re-release of
+                <a
+                  href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Web Developer Bootcamp</a
+                >, I decided to remake the final course project using React (and
+                Tailwind) instead of EJS to display the frontend.
+              </p>
+              <div class="card__link">
+                <a
+                  href="https://github.com/Insidiae/yelpcamp-mern"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="u-center-text u-margin-top--lg u-margin-bottom--md">
+          <h1 class="heading-secondary">More Online Course Activities</h1>
+        </div>
+
+        <div class="projects card-list">
+          <article class="card">
+            <div class="card__img-box">
               <img
                 src="https://cssgrid.io/images/GRID-social-share.png"
-                alt="Placeholder Image"
+                alt="Thumbnail image from the cssgrid.io course page"
+                class="card__img"
               />
             </div>
-            <h3 class="projects__grid__item__title">
-              CSS Grid Exercises/Projects
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="griddyup/griddyup.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
+            <div class="card__details">
+              <h3 class="card__title">CSS Grid Exercises / Projects</h3>
+              <div class="card__tags">
+                <span class="tag">CSS</span>
+              </div>
+              <p class="card__description">
+                Course exercises from
+                <a
+                  href="https://cssgrid.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Wes Bos' CSS Grid course</a
+                >.
+              </p>
+              <div class="card__link">
+                <a
+                  href="griddyup/griddyup.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Exercises
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/advanced-css-and-sass.jpg"
+                alt="Thumbnail image from Advanced CSS and Sass' Udemy page"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Advanced CSS and Sass</h3>
+              <div class="card__tags">
+                <span class="tag">CSS</span>
+                <span class="tag">Sass</span>
+              </div>
+              <p class="card__description">
+                Course projects from Jonas Schmedtmann's
+                <a
+                  href="https://www.udemy.com/course/advanced-css-and-sass/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Advanced CSS and Sass</a
+                >
+                course. Also features the final project from his revamped
+                <a
+                  href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >HTML and CSS course</a
+                >, remade using Sass.
+              </p>
+              <div class="card__link">
+                <a
+                  href="advanced-css-and-sass/index.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/ztm-react-native.png"
+                alt="Thumbnail image from Zero To Mastery's React Native Course page"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">React Native Zero To Mastery</h3>
+              <div class="card__tags">
+                <span class="tag">React</span>
+                <span class="tag">React Native</span>
+              </div>
+              <p class="card__description">
+                Course projects from the
+                <a
+                  href="https://zerotomastery.io/courses/learn-react-native/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Zero To Mastery React Native course</a
+                >.
+              </p>
+              <div class="card__link">
+                <a
+                  href="https://github.com/Insidiae/ztm-react-native"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/ztm-machine-learning.png"
+                alt="Thumbnail image from Zero To Mastery's Machine Learning Course page"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Machine Learning Zero To Mastery</h3>
+              <div class="card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">AI/ML</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Tensorflow</span>
+              </div>
+              <p class="card__description">
+                Course exercises and projects from the
+                <a
+                  href="https://zerotomastery.io/courses/machine-learning-and-data-science-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Zero To Mastery Machine Learning course</a
+                >.
+              </p>
+              <div class="card__link">
+                <a
+                  href="https://github.com/Insidiae/ztm-machine-learning"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="portfolio-assets/img/typescript-course.jpg"
+                alt="Thumbnail image from TypeScript: The Complete Developer's Guide's Udemy Course page"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">TypeScript Levelgrind</h3>
+              <div class="card__tags">
+                <span class="tag">TS</span>
+                <span class="tag">Node</span>
+                <span class="tag">Express</span>
+                <span class="tag">React</span>
+              </div>
+              <p class="card__description">
+                Course exercises and projects from the
+                <a
+                  href="https://www.udemy.com/course/typescript-the-complete-developers-guide/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >TypeScript: The Complete Developer's Guide</a
+                >
+                course.
+              </p>
+              <div class="card__link">
+                <a
+                  href="https://github.com/Insidiae/typescript-levelgrind"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Exercises
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-box">
+              <img
+                src="https://kentcdodds.com/images/epicreact-promo/er-1.gif"
+                alt="Promo image from the Epic React course"
+                class="card__img"
+              />
+            </div>
+            <div class="card__details">
+              <h3 class="card__title">Epic React Checkpoints</h3>
+              <div class="card__tags">
+                <span class="tag">React</span>
+                <span class="tag">JS</span>
+                <span class="tag">TS</span>
+              </div>
+              <p class="card__description">
+                Notes and Code as I go along with Kent C. Dodds'
+                <a
+                  href="https://epicreact.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Epic React</a
+                >
+                course.
+              </p>
+              <div class="card__link">
+                <a
+                  href="https://github.com/Insidiae/epic-react-checkpoints"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Exercises
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </main>
-
-    <!-- Uncomment the script below to view tests for this page -->
-    <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
-    <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

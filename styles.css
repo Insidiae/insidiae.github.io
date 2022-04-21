@@ -215,7 +215,7 @@ body {
   flex-wrap: wrap;
 }
 
-.card {
+.project {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -225,7 +225,7 @@ body {
   box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.1);
 }
 
-.card__details {
+.project__details {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -233,24 +233,24 @@ body {
   padding: 0 24px 16px;
 }
 
-.card__img {
+.project__img {
   width: 100%;
   border-radius: 8px 8px 0 0;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
-.card__title {
+.project__title {
   font-size: 1.25rem;
   line-height: 1.1;
 }
-.card__tags {
+.project__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
 }
 
-.card__link {
+.project__link {
   margin-top: auto;
   text-align: center;
 }
@@ -262,9 +262,95 @@ body {
   background-color: var(--tag-background-color, hsl(0deg 0% 83%));
   color: var(--tag-color, hsl(0deg 0% 100%));
   font-size: 0.75rem;
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   line-height: 1.6;
   text-transform: uppercase;
+}
+
+.tag--legacy {
+  --tag-background-color: hsl(0deg 0% 83%);
+  --tag-color: hsl(0deg 0% 17%);
+}
+
+.tag--html {
+  --tag-background-color: #f06529;
+  --tag-color: #ebebeb;
+}
+
+.tag--bootstrap {
+  --tag-background-color: #563d7c;
+  --tag-color: #ffffff;
+}
+
+.tag--css {
+  --tag-background-color: #2965f1;
+  --tag-color: #ebebeb;
+}
+
+.tag--sass {
+  --tag-background-color: #cc6699;
+  --tag-color: #ffffff;
+}
+
+.tag--javascript {
+  --tag-background-color: #f7df1e;
+  --tag-color: #000000;
+}
+
+.tag--jquery {
+  --tag-background-color: #333333;
+  --tag-color: #ffffff;
+}
+
+.tag--react,
+.tag--react-native {
+  --tag-background-color: #282c34;
+  --tag-color: #61dafb;
+}
+
+.tag--typescript {
+  --tag-background-color: #3178c6;
+  --tag-color: #faf9f8;
+}
+
+.tag--ajax {
+  --tag-color: #4a98ce;
+}
+
+.tag--d3 {
+  --tag-background-color: #555555;
+  --tag-color: #f9a03c;
+}
+
+.tag--mongodb {
+  --tag-color: #3fa037;
+}
+
+.tag--node {
+  --tag-background-color: #66cc33;
+  --tag-color: #333333;
+}
+
+.tag--express {
+  --tag-color: #333333;
+}
+
+.tag--python {
+  --tag-background-color: #ffde57;
+  --tag-color: #4584b6;
+}
+
+.tag--ml {
+  --tag-background-color: #150458;
+}
+
+.tag--scikit-learn {
+  --tag-background-color: #f7931e;
+}
+
+.tag--tensorflow {
+  --tag-background-color: #e6e6e6;
+  --tag-color: #ff6f00;
 }
 
 .contact-list {

@@ -83,6 +83,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
 /* 
   * Hide content for sighted users while still allowing
   * assistive technologies to discover and interact
@@ -125,7 +132,8 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  font-variation-settings: "slnt" -12;
 }
 
 /* 
@@ -173,6 +181,38 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 48px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 300px;
+  padding: 16px;
+  border-radius: 8px;
+  /* box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.075); */
+  box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.1);
+}
+
+.skill__heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.skill__icon {
+  font-size: 2rem;
+}
+
+.skill__category {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.skill__list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -314,8 +354,12 @@ body {
   margin-inline-end: 0.75em;
 }
 
+.section-skills {
+  padding: 64px 16px;
+}
+
 .section-projects {
-  padding: 128px 0;
+  padding: 64px 16px;
 }
 
 .filler {
@@ -419,7 +463,11 @@ body {
     display: revert;
   }
 
+  .section-skills {
+    padding: 64px 64px;
+  }
+
   .section-projects {
-    padding: 128px 64px;
+    padding: 64px 64px;
   }
 }

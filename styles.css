@@ -267,6 +267,42 @@ body {
   text-transform: uppercase;
 }
 
+.contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact,
+.contact:link,
+.contact:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 100px;
+  aspect-ratio: 1 / 1;
+  border: 3px solid #588dfd;
+  border-radius: 50%;
+  transition: background-color 500ms;
+}
+
+.contact__icon {
+  font-size: 3rem;
+  color: #588dfd;
+  transition: color 500ms;
+}
+
+.contact:hover {
+  transition: background-color 250ms;
+  background-color: #588dfd;
+}
+
+.contact:hover .contact__icon {
+  color: white;
+  transition: color 250ms;
+}
+
 /* 
 *=========================*
 *      LAYOUT STYLES      *
@@ -359,6 +395,10 @@ body {
 }
 
 .section-projects {
+  padding: 64px 16px;
+}
+
+.section-contact {
   padding: 64px 16px;
 }
 
@@ -468,6 +508,10 @@ body {
   }
 
   .section-projects {
+    padding: 64px 64px;
+  }
+
+  .section-contact {
     padding: 64px 64px;
   }
 }

@@ -418,4 +418,8 @@ body {
   .profile__name {
     display: revert;
   }
+
+  .section-projects {
+    padding: 128px 64px;
+  }
 }

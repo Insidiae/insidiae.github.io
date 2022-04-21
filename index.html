@@ -2,284 +2,782 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro|Ubuntu"
-      rel="stylesheet"
+    <meta property="og:url" content="https://insidiae.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KB Ruado (@Insidiae)" />
+    <meta
+      property="og:description"
+      content="KB Ruado (@Insidiae) — Online course enthusiast"
     />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/28495550"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    <meta property="og:image:alt" content="KB Ruado's Github Profile image" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="128" />
+    <meta property="og:image:height" content="128" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="KB Ruado (@Insidiae)" />
+    <meta
+      name="twitter:image"
+      content="https://avatars.githubusercontent.com/u/28495550"
     />
+    <meta name="twitter:image:alt" content="KB Ruado's Github profile image" />
+    <meta
+      name="twitter:description"
+      content="KB Ruado (@Insidiae) — Online course enthusiast"
+    />
+
     <link rel="stylesheet" href="styles.css" />
+
+    <script src="nav.js" defer></script>
+
     <title>KB Ruado (@Insidiae)</title>
   </head>
-
   <body>
-    <!-- TODO: GIVE THIS PAGE THE REVAMP IT DESERVES -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://github.com/Insidiae/">
+    <header class="header">
+      <div class="profile">
+        <a
+          id="profile-link"
+          class="profile__link"
+          href="https://github.com/Insidiae/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="visually-hidden">Visit KB Ruado's Github Profile</span>
           <img
             src="https://avatars.githubusercontent.com/u/28495550"
-            alt="Profile Picture"
-            width="50"
-            height="50"
-            class="rounded-circle"
+            alt="KB Ruado's Github Profile Picture"
+            class="profile__picture"
           />
-          KB Ruado (@insidiae)
+          <span class="profile__name"> KB Ruado (@Insidiae) </span>
         </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggler"
-          aria-controls="navbarToggler"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarToggler">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
 
-    <!-- TODO: Boostrapify main section -->
-    <main class="container-fluid px-0">
-      <section class="welcome" id="welcome-section">
-        <div class="welcome__text">
-          <h1 class="welcome__title">Hello there.</h1>
-          <p class="welcome__message">
-            This is a work-in-progress page, but feel free to check out my
-            projects down below
-          </p>
+      <button
+        class="header__nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="navbar">
+        <ul id="primary-navigation" class="header__nav" data-visible="false">
+          <li>
+            <a href="#" class="header__nav__link">
+              <span aria-hidden="true">00</span> Home
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="header__nav__link">
+              <span aria-hidden="true">01</span> Skills
+            </a>
+          </li>
+          <li>
+            <a href="projects.html" class="header__nav__link">
+              <span aria-hidden="true">02</span> Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="header__nav__link">
+              <span aria-hidden="true">03</span> Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome-section" class="section-hero">
+        <div class="hero">
+          <div class="hero__text-box">
+            <h1 class="heading-primary">Hello There.</h1>
+            <p class="hero__description">
+              I'm an online course enthusiast working to improve my skills and
+              level up my career, currently exploring a bunch of technologies to
+              use for my university thesis next year. In my free time I binge
+              online courses and build lots of fun and interesting projects.
+            </p>
+          </div>
+
+          <div class="hero__img-box">
+            <img
+              src="portfolio-assets/img/hero-img.png"
+              alt=""
+              class="hero__img"
+            />
+          </div>
         </div>
       </section>
 
-      <section class="projects" id="projects">
-        <h1 class="section__divider">Projects</h1>
-        <h2 class="section__desc">Featured Projects</h2>
-        <!-- TODO: Add thumbnails for projects -->
-        <div class="projects__grid">
-          <!-- freeCodeCamp Drum Machine Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Drum Machine</h3>
-            <a
-              class="projects__grid__item__link"
-              href="drum/drum.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Markdown Previewer Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Markdown Previewer</h3>
-            <a
-              class="projects__grid__item__link"
-              href="markdown/markdown.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
-
-          <!-- WebDev Bootcamp Projects -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://img-b.udemycdn.com/course/240x135/625204_436a_3.jpg"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">
-              <a
-                class="section__desc__link"
-                href="https://www.udemy.com/the-web-developer-bootcamp/"
-              >
-                The Web Developer Bootcamp
-              </a>
-              Projects
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="wdbc-proj/index.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
-
-          <!-- Advanced CSS and Sass Projects -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://img-b.udemycdn.com/course/240x135/1026604_790b_2.jpg"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">
-              <a
-                href="https://www.udemy.com/advanced-css-and-sass"
-                target="_blank"
-                >Advanced CSS and Sass</a
-              >
-              Projects
-            </h3>
-            <a
-              class="projects__grid__item__link"
-              href="advanced-css-and-sass/index.html"
-              target="_blank"
-            >
-              View More
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Product Landing Page Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="landing/assets/img/turret-box.png"
-                alt="Aperture Sentry Turret"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Product Landing Page</h3>
-            <a
-              class="projects__grid__item__link"
-              href="landing/landing.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Simon® Game Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Simon&reg; Game</h3>
-            <a
-              class="projects__grid__item__link"
-              href="simon/simon.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
-
-          <!-- freeCodeCamp Tic-Tac-Toe Project -->
-          <div class="project-tile projects__grid__item">
-            <div class="projects__grid__item__thumbnail">
-              <img
-                src="https://place-hold.it/250x250"
-                alt="Placeholder Image"
-              />
-            </div>
-            <h3 class="projects__grid__item__title">Tic Tac Toe</h3>
-            <a
-              class="projects__grid__item__link"
-              href="tictactoe/tictactoe.html"
-              target="_blank"
-            >
-              View Project
-            </a>
-          </div>
+      <section id="skills" class="section-skills">
+        <div class="u-center-text u-margin-bottom--md">
+          <h2 class="heading-secondary">Languages and Tools</h2>
         </div>
 
-        <h2 class="section__desc">
-          <a href="projects.html"> View All Projects &rarr; </a>
-        </h2>
+        <div class="card-list">
+          <article class="skill">
+            <div class="skill__heading">
+              <span class="skill__icon-wrapper">
+                <ion-icon class="skill__icon" name="rocket-sharp"></ion-icon>
+              </span>
+              <h3 class="heading__tertiary">I specialize in</h3>
+            </div>
+            <div class="skill__list">
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                title="HTML"
+                alt="HTML"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                title="CSS"
+                alt="CSS"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                title="Javascript"
+                alt="Javascript"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                title="Sass"
+                alt="Sass"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                title="MongoDB"
+                alt="MongoDB"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                title="Express"
+                alt="Express"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                title="React"
+                alt="React"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+                title="Node.js"
+                alt="Node.js"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                title="Tailwind"
+                alt="Tailwind"
+                width="40"
+                height="40"
+              />
+            </div>
+          </article>
+
+          <article class="skill">
+            <div class="skill__heading">
+              <span class="skill__icon-wrapper">
+                <ion-icon class="skill__icon" name="book-sharp"></ion-icon>
+              </span>
+              <h3 class="heading__tertiary">I'm currently learning</h3>
+            </div>
+            <div class="skill__list">
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                title="TypeScript"
+                alt="TypeScript"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg"
+                title="D3"
+                alt="D3"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                title="GraphQL"
+                alt="GraphQL"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                title="Redux"
+                alt="Redux"
+                width="40"
+                height="40"
+              />
+            </div>
+          </article>
+
+          <article class="skill">
+            <div class="skill__heading">
+              <span class="skill__icon-wrapper">
+                <ion-icon class="skill__icon" name="thumbs-up-sharp"></ion-icon>
+              </span>
+              <h3 class="heading__tertiary">I also do</h3>
+            </div>
+            <div class="skill__list">
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+                title="Jest"
+                alt="Jest"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://simpleicons.org/icons/testinglibrary.svg"
+                title="Testing Library"
+                alt="Testing Library"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                title="Firebase"
+                alt="Firebase"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                title="Python"
+                alt="Python"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg"
+                title="Jupyter Notebook"
+                alt="Jupyter Notebook"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                title="NumPy"
+                alt="NumPy"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                title="Pandas"
+                alt="Pandas"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg"
+                title="Matplotlib"
+                alt="Matplotlib"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+                title="Scikit-learn"
+                alt="Scikit-learn"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                title="Tensorflow"
+                alt="Tensorflow"
+                width="40"
+                height="40"
+              />
+            </div>
+          </article>
+
+          <article class="skill">
+            <div class="skill__heading">
+              <span class="skill__icon-wrapper">
+                <ion-icon class="skill__icon" name="bulb-sharp"></ion-icon>
+              </span>
+              <h3 class="heading__tertiary">I'm interested in</h3>
+            </div>
+            <div class="skill__list">
+              <img
+                loading="lazy"
+                src="https://raw.githubusercontent.com/bestofjs/bestofjs-webui/master/public/logos/remix.svg"
+                title="Remix"
+                alt="Remix"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
+                title="Three.js"
+                alt="Three.js"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                title="Vue.js"
+                alt="Vue.js"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"
+                title="Svelte"
+                alt="Svelte"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                title="Angular"
+                alt="Angular"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                title="Next.js"
+                alt="Next.js"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
+                title="Storybook"
+                alt="Storybook"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                title="PostgreSQL"
+                alt="PostgreSQL"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                title="C#"
+                alt="C#"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+                title="Unity"
+                alt="Unity"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                title="C++"
+                alt="C++"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg"
+                title="Embedded C"
+                alt="Embedded C"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"
+                title="Arduino"
+                alt="Arduino"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"
+                title="Raspberry PI"
+                alt="Raspberry PI"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg"
+                title="Rust"
+                alt="Rust"
+                width="40"
+                height="40"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+                title="R"
+                alt="R"
+                width="40"
+                height="40"
+              />
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section class="contact" id="contact">
-        <h1 class="section__divider">Contact</h1>
-        <h2 class="section__desc">My Social Media Links</h2>
-        <div class="contact__grid">
-          <a
-            href="mailto:insidiae423@gmail.com"
-            class="contact__grid__item"
-            target="_blank"
+      <section id="projects" class="section-projects">
+        <div class="u-center-text u-margin-bottom--md">
+          <h2 class="heading-secondary">Featured Projects</h2>
+        </div>
+
+        <div class="projects card-list">
+          <article class="project project-tile">
+            <div class="project__img-box">
+              <img
+                loading="lazy"
+                src="https://kentcdodds.com/images/epicreact-promo/er-1.gif"
+                alt="Promo image from the Epic React course"
+                class="project__img"
+              />
+            </div>
+            <div class="project__details">
+              <h3 class="project__title">Epic React Checkpoints</h3>
+              <div class="project__tags">
+                <span class="tag tag--react">React</span>
+                <span class="tag tag--javascript">JS</span>
+                <span class="tag tag--typescript">TS</span>
+              </div>
+              <p class="project__description">
+                Notes and Code as I go along with Kent C. Dodds'
+                <a
+                  href="https://epicreact.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Epic React</a
+                >
+                course.
+              </p>
+              <div class="project__link">
+                <a
+                  href="https://github.com/Insidiae/epic-react-checkpoints"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Exercises
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-tile">
+            <div class="project__img-box">
+              <img
+                loading="lazy"
+                src="portfolio-assets/img/wdbc.jpg"
+                alt="(New) Thumbnail image from The Advanced Web Developer Bootcamp's Udemy page"
+                class="project__img"
+              />
+            </div>
+            <div class="project__details">
+              <h3 class="project__title">YelpCamp (MERN Remake)</h3>
+              <div class="project__tags">
+                <span class="tag tag--mongodb">MongoDB</span>
+                <span class="tag tag--express">Express</span>
+                <span class="tag tag--react">React</span>
+                <span class="tag tag--node">Node</span>
+              </div>
+              <p class="project__description">
+                With the re-release of
+                <a
+                  href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >The Web Developer Bootcamp</a
+                >, I decided to remake the final course project using React (and
+                Tailwind) instead of EJS to display the frontend.
+              </p>
+              <div class="project__link">
+                <a
+                  href="https://github.com/Insidiae/yelpcamp-mern"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-tile">
+            <div class="project__img-box">
+              <img
+                loading="lazy"
+                src="portfolio-assets/img/js-algos-and-data-structs.jpg"
+                alt="Thumbnail image from the JavaScript Algorithms and Data Structures Masterclass Udemy page"
+                class="project__img"
+              />
+            </div>
+            <div class="project__details">
+              <h3 class="project__title">
+                JavaScript Algorithms and Data Structures
+              </h3>
+              <div class="project__tags">
+                <span class="tag tag--javascript">JS</span>
+              </div>
+              <p class="project__description">
+                Course exercises and notes from Colt Steele's
+                <a
+                  href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >JavaScript Algorithms and Data Structures Masterclass</a
+                >
+                course. Also features course exercises from the
+                <a
+                  href="https://zerotomastery.io/courses/faang-interview-prep/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ZTM Big Tech (FAANG) Interviews</a
+                >
+                course.
+              </p>
+              <div class="project__link">
+                <a
+                  href="https://github.com/Insidiae/js-algos-and-data-structs"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Exercises
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-tile">
+            <div class="project__img-box">
+              <img
+                loading="lazy"
+                src="portfolio-assets/img/advanced-css-and-sass.jpg"
+                alt="Thumbnail image from Advanced CSS and Sass' Udemy page"
+                class="project__img"
+              />
+            </div>
+            <div class="project__details">
+              <h3 class="project__title">Advanced CSS and Sass</h3>
+              <div class="project__tags">
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--sass">Sass</span>
+              </div>
+              <p class="project__description">
+                Course projects from Jonas Schmedtmann's
+                <a
+                  href="https://www.udemy.com/course/advanced-css-and-sass/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Advanced CSS and Sass</a
+                >
+                course. Also features the final project from his revamped
+                <a
+                  href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >HTML and CSS course</a
+                >, remade using Sass.
+              </p>
+              <div class="project__link">
+                <a
+                  href="advanced-css-and-sass/index.html"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-tile">
+            <div class="project__img-box">
+              <img
+                loading="lazy"
+                src="portfolio-assets/img/ztm-machine-learning.png"
+                alt="Thumbnail image from Zero To Mastery's Machine Learning Course page"
+                class="project__img"
+              />
+            </div>
+            <div class="project__details">
+              <h3 class="project__title">Machine Learning Zero To Mastery</h3>
+              <div class="project__tags">
+                <span class="tag tag--python">Python</span>
+                <span class="tag tag--ml">AI/ML</span>
+                <span class="tag tag--scikit-learn">Scikit-Learn</span>
+                <span class="tag tag--tensorflow">Tensorflow</span>
+              </div>
+              <p class="project__description">
+                Course exercises and projects from the
+                <a
+                  href="https://zerotomastery.io/courses/machine-learning-and-data-science-bootcamp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Zero To Mastery Machine Learning course</a
+                >.
+              </p>
+              <div class="project__link">
+                <a
+                  href="https://github.com/Insidiae/ztm-machine-learning"
+                  class="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Projects
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="u-center-text u-margin-top--lg u-margin-bottom--md">
+          <a href="projects.html" class="btn btn--large"
+            >View More Projects &rarr;</a
           >
-            <i class="contact__grid__item__icon bi bi-envelope"></i>
-          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="section-contact">
+        <div class="u-center-text u-margin-bottom--md">
+          <h2 class="heading-secondary">My Social Media Links</h2>
+        </div>
+
+        <div class="contact-list">
           <a
-            href="https://twitter.com/insidiae423"
-            class="contact__grid__item"
-            target="_blank"
-          >
-            <i class="contact__grid__item__icon bi bi-twitter"></i>
-          </a>
-          <a
-            href="https://www.facebook.com/Insidiae423"
-            class="contact__grid__item"
-            target="_blank"
-          >
-            <i class="contact__grid__item__icon bi bi-facebook"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/insidiae423/"
-            class="contact__grid__item"
-            target="_blank"
-          >
-            <i class="contact__grid__item__icon bi bi-linkedin"></i>
-          </a>
-          <a
+            class="contact"
             href="https://github.com/Insidiae/"
-            class="contact__grid__item"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <i class="contact__grid__item__icon bi bi-github"></i>
+            <span class="visually-hidden">
+              Visit KB Ruado's Github profile
+            </span>
+            <ion-icon name="logo-github" class="contact__icon"></ion-icon>
+          </a>
+
+          <a
+            class="contact"
+            href="https://www.linkedin.com/in/insidiae423/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="visually-hidden">
+              Visit KB Ruado's Linkedin profile
+            </span>
+            <ion-icon name="logo-linkedin" class="contact__icon"></ion-icon>
+          </a>
+
+          <a
+            class="contact"
+            href="https://twitter.com/insidiae423"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="visually-hidden">
+              Visit KB Ruado's Twitter profile
+            </span>
+            <ion-icon name="logo-twitter" class="contact__icon"></ion-icon>
+          </a>
+
+          <a
+            class="contact"
+            href="https://www.facebook.com/Insidiae423/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="visually-hidden">
+              Visit KB Ruado's Facebook profile
+            </span>
+            <ion-icon name="logo-facebook" class="contact__icon"></ion-icon>
+          </a>
+
+          <a
+            class="contact"
+            href="mailto:insidiae423@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="visually-hidden"> Send an email to KB Ruado </span>
+            <ion-icon name="mail-sharp" class="contact__icon"></ion-icon>
           </a>
         </div>
       </section>
     </main>
 
-    <!-- Uncomment the script below to view tests for this page -->
-    <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
-    <!-- Bootstrap JavaScript Bundle with Popper -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-      crossorigin="anonymous"
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- * OPTIONAL: Run freeCodeCamp tests for the Portfolio project -->
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>

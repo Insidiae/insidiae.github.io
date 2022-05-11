@@ -1,0 +1,77 @@
+/* Import and use the Inter font https://rsms.me/inter/ */
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  letter-spacing: -0.011em;
+  font-family: "Inter var", sans-serif;
+  font-size: 16px;
+  color: hsl(210deg 29% 29%);
+  background: hsl(210deg 17% 98%);
+}
+
+.wrapper {
+  position: relative;
+}
+
+svg {
+  shape-rendering: crispedges;
+}
+
+.cell {
+  transition: fill 250ms ease-out, stroke 250ms ease-out;
+}
+
+.cell:hover {
+  stroke: hsl(210deg 29% 29%);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 5em);
+  padding-bottom: 0.3em;
+  margin-bottom: 50px;
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  padding: 0.6em 1em;
+  background: hsl(210deg 29% 29%);
+  color: hsl(0deg 0% 100%);
+  text-align: center;
+  border: 1px solid hsl(0deg 0% 87%);
+  z-index: 10;
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+}
+
+.tooltip:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: hsl(210deg 29% 29%);
+  border: 1px solid hsl(0deg 0% 87%);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 50%) rotate(45deg);
+  transform-origin: center center;
+  z-index: 10;
+}
+
+.tooltip-date {
+  margin-bottom: 0.2em;
+  font-weight: 600;
+}

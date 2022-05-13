@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>freeCodeCamp Project: Visualize Data with a Treemap Diagram</title>
+  </head>
+  <body>
+    <div id="heading" class="heading">
+      <h1 id="title" class="title"></h1>
+      <h2 id="description" class="description"></h2>
+    </div>
+
+    <div id="wrapper" class="wrapper">
+      <div id="tooltip" class="tooltip">
+        <div class="tooltip-name" id="name"></div>
+        <div class="tooltip-category">
+          Category: <span id="category"></span>
+        </div>
+        <div class="tooltip-value">Value: <span id="value"></span></div>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="./chart.js"></script>
+  </body>
+</html>

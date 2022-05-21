@@ -304,7 +304,7 @@ body {
   color: var(--tag-color, hsl(0deg 0% 100%));
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   text-transform: uppercase;
 }
 

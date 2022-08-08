@@ -349,6 +349,11 @@ body {
   --tag-color: #61dafb;
 }
 
+.tag--redux {
+  --tag-background-color: #764abc;
+  --tag-color: #ffffff;
+}
+
 .tag--typescript {
   --tag-background-color: #3178c6;
   --tag-color: #faf9f8;

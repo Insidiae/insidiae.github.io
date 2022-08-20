@@ -600,7 +600,9 @@ body {
 		z-index: 2;
 	}
 
-	.header__nav[data-visible="true"] {
+	.header__nav[data-visible="true"],
+	/* Quickly show nav when links are focused via keyboard */
+	.header__nav[data-visible="false"]:focus-within {
 		transform: translateX(0%);
 		transition: transform 400ms ease-out;
 	}

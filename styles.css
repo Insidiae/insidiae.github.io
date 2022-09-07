@@ -386,6 +386,11 @@ body {
 	--tag-color: #333333;
 }
 
+.tag--nestjs {
+	--tag-background-color: #ea2845;
+	--tag-color: #ffffff;
+}
+
 .tag--python {
 	--tag-background-color: #ffde57;
 	--tag-color: #4584b6;

@@ -409,6 +409,10 @@ body {
 	--tag-color: #ff6f00;
 }
 
+.tag--rust {
+	--tag-background-color: #f46623;
+}
+
 .contact-list {
 	display: flex;
 	justify-content: center;

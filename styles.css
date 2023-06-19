@@ -364,6 +364,11 @@ body {
 	--tag-color: #faf9f8;
 }
 
+.tag--threejs {
+	--tag-background-color: #f3f3f3;
+	--tag-color: #333;
+}
+
 .tag--ajax {
 	--tag-color: #4a98ce;
 }
